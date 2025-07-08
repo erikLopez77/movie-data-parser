@@ -9,7 +9,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@base <http://example.org/abox> .
+@base <http://example.org/abox#> .
 
 <http://example.org/abox> rdf:type owl:Ontology ;
                            owl:imports <http://example.org/tbox> .
@@ -127,8 +127,11 @@ dbr:Blade_Runner_2049 rdf:type owl:NamedIndividual ,
 ###  http://dbpedia.org/resource/Brad_Pitt
 dbr:Brad_Pitt rdf:type owl:NamedIndividual ,
                        dbo:Person ;
+              owl:sameAs exa:William_Bradley_Pitt ;
               rdfs:label "Brad Pitt"@en .
 
+
+###  http://example.org/abox#William_Bradley_Pitt
 
 ###  http://dbpedia.org/resource/Carrie-Anne_Moss
 dbr:Carrie-Anne_Moss rdf:type owl:NamedIndividual .
@@ -1475,6 +1478,11 @@ exa:Willem_Dafoe rdf:type owl:NamedIndividual ,
                           ext:Actor .
 
 
+###  http://example.org/abox#William_Bradley_Pitt
+exa:William_Bradley_Pitt rdf:type owl:NamedIndividual ,
+                                  dbo:Person .
+
+
 ###  http://example.org/abox#Woody_Harrelson
 exa:Woody_Harrelson rdf:type owl:NamedIndividual ,
                              ext:Actor .
@@ -1488,6 +1496,7 @@ exa:Yorgos_Lanthimos rdf:type owl:NamedIndividual ,
 ###  http://example.org/abox#12_Years_a_Slave
 <http://example.org/abox#12_Years_a_Slave> rdf:type owl:NamedIndividual ,
                                                     dbo:Film ;
+                                           ext:runtime 120 ;
                                            dbo:director exa:Steve_McQueen ;
                                            dbo:genre <https://schema.org/Biography> ,
                                                      <https://schema.org/Drama> ,

@@ -7,9 +7,50 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
-@base <http://example.org/tbox> .
+@base <http://example.org/tbox#> .
 
 <http://example.org/tbox> rdf:type owl:Ontology .
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://example.org/tbox#positiveInteger
+ext:positiveInteger rdf:type rdfs:Datatype ;
+                    owl:equivalentClass [ rdf:type rdfs:Datatype ;
+                                          owl:onDatatype xsd:integer ;
+                                          owl:withRestrictions ( [ xsd:minInclusive 0
+                                                                 ]
+                                                               )
+                                        ] .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dbpedia.org/ontology/releaseDate
+dbo:releaseDate rdf:type owl:DatatypeProperty ;
+                owl:equivalentProperty ext:releaseDate ;
+                rdfs:range xsd:integer .
+
+
+###  http://dbpedia.org/ontology/runtime
+dbo:runtime rdf:type owl:DatatypeProperty ;
+            owl:equivalentProperty ext:runtime .
+
+
+###  http://example.org/tbox#releaseDate
+ext:releaseDate rdf:type owl:DatatypeProperty ;
+                rdfs:domain dbo:Film ;
+                rdfs:range xsd:dateTime .
+
+
+###  http://example.org/tbox#runtime
+ext:runtime rdf:type owl:DatatypeProperty ;
+            rdfs:domain dbo:Film ;
+            rdfs:range xsd:integer .
+
 
 #################################################################
 #    Classes
@@ -17,17 +58,17 @@
 
 ###  http://dbpedia.org/ontology/Film
 dbo:Film rdf:type owl:Class ;
-         rdfs:subClassOf ext:CreativeWork ,
-                         ext:Media .
+         owl:equivalentClass ext:Movie .
 
 
 ###  http://dbpedia.org/ontology/Person
-dbo:Person rdf:type owl:Class .
+dbo:Person rdf:type owl:Class ;
+           owl:equivalentClass ext:Person .
 
 
 ###  http://example.org/tbox#Actor
 ext:Actor rdf:type owl:Class ;
-          rdfs:subClassOf dbo:Person .
+          rdfs:subClassOf ext:Person .
 
 
 ###  http://example.org/tbox#CreativeWork
@@ -37,11 +78,27 @@ ext:CreativeWork rdf:type owl:Class ;
 
 ###  http://example.org/tbox#Director
 ext:Director rdf:type owl:Class ;
-             rdfs:subClassOf dbo:Person .
+             rdfs:subClassOf ext:Person .
+
+
+###  http://example.org/tbox#Genre
+ext:Genre rdf:type owl:Class ;
+          owl:equivalentClass schema:Genre .
 
 
 ###  http://example.org/tbox#Media
 ext:Media rdf:type owl:Class .
+
+
+###  http://example.org/tbox#Movie
+ext:Movie rdf:type owl:Class ;
+          rdfs:subClassOf ext:CreativeWork ,
+                          ext:Media .
+
+
+###  http://example.org/tbox#Person
+ext:Person rdf:type owl:Class ;
+           owl:disjointWith ext:Work .
 
 
 ###  http://example.org/tbox#Work
