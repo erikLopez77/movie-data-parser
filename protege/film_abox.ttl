@@ -1,0 +1,1562 @@
+@prefix : <http://example.org/abox#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix exa: <http://example.org/abox#> .
+@prefix ext: <http://example.org/tbox#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@base <http://example.org/abox> .
+
+<http://example.org/abox> rdf:type owl:Ontology ;
+                           owl:imports <http://example.org/tbox> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://dbpedia.org/ontology/director
+dbo:director rdf:type owl:AnnotationProperty .
+
+
+###  http://dbpedia.org/ontology/genre
+dbo:genre rdf:type owl:AnnotationProperty .
+
+
+###  http://dbpedia.org/ontology/releaseDate
+dbo:releaseDate rdf:type owl:AnnotationProperty .
+
+
+###  http://dbpedia.org/ontology/runtime
+dbo:runtime rdf:type owl:AnnotationProperty .
+
+
+###  http://dbpedia.org/ontology/starring
+dbo:starring rdf:type owl:AnnotationProperty .
+
+
+###  http://example.org/tbox#hasDirector
+ext:hasDirector rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://dbpedia.org/resource/A_Beautiful_Mind
+dbr:A_Beautiful_Mind rdf:type owl:NamedIndividual ,
+                              dbo:Film ;
+                     dbo:director dbr:Ron_Howard ;
+                     dbo:genre dbr:Biography ,
+                               dbr:Drama ;
+                     dbo:releaseDate "2001-12-21"^^xsd:date ;
+                     dbo:runtime 135 ;
+                     dbo:starring dbr:Jennifer_Connelly ,
+                                  dbr:Russell_Crowe ;
+                     rdfs:label "A Beautiful Mind"@en .
+
+
+###  http://dbpedia.org/resource/Action
+dbr:Action rdf:type owl:NamedIndividual ,
+                    schema:Genre ;
+           rdfs:label "Action"@en .
+
+
+###  http://dbpedia.org/resource/Adventure
+dbr:Adventure rdf:type owl:NamedIndividual ,
+                       schema:Genre ;
+              rdfs:label "Adventure"@en .
+
+
+###  http://dbpedia.org/resource/Andrew_Garfield
+dbr:Andrew_Garfield rdf:type owl:NamedIndividual ,
+                             dbo:Person ;
+                    rdfs:label "Andrew Garfield"@en .
+
+
+###  http://dbpedia.org/resource/Anne_Hathaway
+dbr:Anne_Hathaway rdf:type owl:NamedIndividual ,
+                           dbo:Person ;
+                  rdfs:label "Anne Hathaway"@en .
+
+
+###  http://dbpedia.org/resource/Avatar
+dbr:Avatar rdf:type owl:NamedIndividual ,
+                    dbo:Film ;
+           dbo:director dbr:James_Cameron ;
+           dbo:genre dbr:Action ,
+                     dbr:Adventure ,
+                     dbr:Science_Fiction ;
+           dbo:releaseDate "2009-12-18"^^xsd:date ;
+           dbo:runtime 162 ;
+           dbo:starring dbr:Sam_Worthington ,
+                        dbr:Zoe_Saldana ;
+           rdfs:label "Avatar"@en .
+
+
+###  http://dbpedia.org/resource/Biography
+dbr:Biography rdf:type owl:NamedIndividual ,
+                       schema:Genre ;
+              rdfs:label "Biography"@en .
+
+
+###  http://dbpedia.org/resource/Blade_Runner_2049
+dbr:Blade_Runner_2049 rdf:type owl:NamedIndividual ,
+                               dbo:Film ;
+                      dbo:director dbr:Denis_Villeneuve ;
+                      dbo:genre dbr:Drama ,
+                                dbr:Science_Fiction ;
+                      dbo:releaseDate "2017-10-06"^^xsd:date ;
+                      dbo:runtime 164 ;
+                      dbo:starring dbr:Harrison_Ford ,
+                                   dbr:Ryan_Gosling ;
+                      rdfs:label "Blade Runner 2049"@en .
+
+
+###  http://dbpedia.org/resource/Brad_Pitt
+dbr:Brad_Pitt rdf:type owl:NamedIndividual ,
+                       dbo:Person ;
+              rdfs:label "Brad Pitt"@en .
+
+
+###  http://dbpedia.org/resource/Carrie-Anne_Moss
+dbr:Carrie-Anne_Moss rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Catch_Me_If_You_Can
+dbr:Catch_Me_If_You_Can rdf:type owl:NamedIndividual ,
+                                 dbo:Film ;
+                        dbo:director dbr:Steven_Spielberg ;
+                        dbo:genre dbr:Drama ,
+                                  dbr:Thriller ;
+                        dbo:releaseDate "2002-12-25"^^xsd:date ;
+                        dbo:runtime 141 ;
+                        dbo:starring dbr:Leonardo_DiCaprio ,
+                                     dbr:Tom_Hanks ;
+                        rdfs:label "Catch Me If You Can"@en .
+
+
+###  http://dbpedia.org/resource/Catherine_Zeta_Jones
+dbr:Catherine_Zeta_Jones rdf:type owl:NamedIndividual ,
+                                  dbo:Person ;
+                         rdfs:label "Catherine Zeta-Jones"@en .
+
+
+###  http://dbpedia.org/resource/Charlize_Theron
+dbr:Charlize_Theron rdf:type owl:NamedIndividual ,
+                             dbo:Person ;
+                    rdfs:label "Charlize Theron"@en .
+
+
+###  http://dbpedia.org/resource/Christian_Bale
+dbr:Christian_Bale rdf:type owl:NamedIndividual ,
+                            dbo:Person ;
+                   rdfs:label "Christian Bale"@en .
+
+
+###  http://dbpedia.org/resource/Christoph_Waltz
+dbr:Christoph_Waltz rdf:type owl:NamedIndividual ,
+                             dbo:Person ;
+                    rdfs:label "Christoph Waltz"@en .
+
+
+###  http://dbpedia.org/resource/Christopher_Nolan
+dbr:Christopher_Nolan rdf:type owl:NamedIndividual ,
+                               dbo:Person ;
+                      rdfs:label "Christopher Nolan"@en .
+
+
+###  http://dbpedia.org/resource/Comedy
+dbr:Comedy rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/David_Fincher
+dbr:David_Fincher rdf:type owl:NamedIndividual ,
+                           dbo:Person ;
+                  rdfs:label "David Fincher"@en .
+
+
+###  http://dbpedia.org/resource/Denis_Villeneuve
+dbr:Denis_Villeneuve rdf:type owl:NamedIndividual ,
+                              dbo:Person ;
+                     rdfs:label "Denis Villeneuve"@en .
+
+
+###  http://dbpedia.org/resource/Drama
+dbr:Drama rdf:type owl:NamedIndividual ,
+                   schema:Genre ;
+          rdfs:label "Drama"@en .
+
+
+###  http://dbpedia.org/resource/Dunkirk
+dbr:Dunkirk rdf:type owl:NamedIndividual ,
+                     dbo:Film ;
+            dbo:director dbr:Christopher_Nolan ;
+            dbo:genre dbr:Action ,
+                      dbr:Drama ,
+                      dbr:War ;
+            dbo:releaseDate "2017-07-21"^^xsd:date ;
+            dbo:runtime 106 ;
+            dbo:starring dbr:Kenneth_Branagh ,
+                         dbr:Mark_Rylance ,
+                         dbr:Tom_Hardy ;
+            rdfs:label "Dunkirk"@en .
+
+
+###  http://dbpedia.org/resource/Elliot_Page
+dbr:Elliot_Page rdf:type owl:NamedIndividual ,
+                         dbo:Person ;
+                rdfs:label "Elliot Page"@en .
+
+
+###  http://dbpedia.org/resource/Forrest_Gump
+dbr:Forrest_Gump rdf:type owl:NamedIndividual ,
+                          dbo:Film ;
+                 dbo:director dbr:Robert_Zemeckis ;
+                 dbo:genre dbr:Drama ,
+                           dbr:Romance ;
+                 dbo:releaseDate "1994-07-06"^^xsd:date ;
+                 dbo:runtime 142 ;
+                 dbo:starring dbr:Gary_Sinise ,
+                              dbr:Robin_Wright ,
+                              dbr:Tom_Hanks ;
+                 rdfs:label "Forrest Gump"@en .
+
+
+###  http://dbpedia.org/resource/Gary_Sinise
+dbr:Gary_Sinise rdf:type owl:NamedIndividual ,
+                         dbo:Person ;
+                rdfs:label "Gary Sinise"@en .
+
+
+###  http://dbpedia.org/resource/George_Miller
+dbr:George_Miller rdf:type owl:NamedIndividual ,
+                           dbo:Person ;
+                  rdfs:label "George Miller"@en .
+
+
+###  http://dbpedia.org/resource/Gladiator
+dbr:Gladiator rdf:type owl:NamedIndividual ,
+                       dbo:Film ;
+              dbo:director dbr:Ridley_Scott ;
+              dbo:genre dbr:Action ,
+                        dbr:Adventure ,
+                        dbr:Drama ;
+              dbo:releaseDate "2000-05-05"^^xsd:date ;
+              dbo:runtime 155 ;
+              dbo:starring dbr:Joaquin_Phoenix ,
+                           dbr:Russell_Crowe ;
+              rdfs:label "Gladiator"@en .
+
+
+###  http://dbpedia.org/resource/Harrison_Ford
+dbr:Harrison_Ford rdf:type owl:NamedIndividual ,
+                           dbo:Person ;
+                  rdfs:label "Harrison Ford"@en .
+
+
+###  http://dbpedia.org/resource/Heath_Ledger
+dbr:Heath_Ledger rdf:type owl:NamedIndividual ,
+                          dbo:Person ;
+                 rdfs:label "Heath Ledger"@en .
+
+
+###  http://dbpedia.org/resource/Hugh_Jackman
+dbr:Hugh_Jackman rdf:type owl:NamedIndividual ,
+                          dbo:Person ;
+                 rdfs:label "Hugh Jackman"@en .
+
+
+###  http://dbpedia.org/resource/Inception
+dbr:Inception rdf:type owl:NamedIndividual ,
+                       dbo:Film ;
+              dbo:director dbr:Christopher_Nolan ;
+              dbo:genre dbr:Science_Fiction ,
+                        dbr:Thriller ;
+              dbo:releaseDate "2010-07-16"^^xsd:date ;
+              dbo:runtime 148 ;
+              dbo:starring dbr:Elliot_Page ,
+                           dbr:Leonardo_DiCaprio ;
+              rdfs:label "Inception"@en .
+
+
+###  http://dbpedia.org/resource/Inglourious_Basterds
+dbr:Inglourious_Basterds rdf:type owl:NamedIndividual ,
+                                  dbo:Film ;
+                         dbo:director dbr:Quentin_Tarantino ;
+                         dbo:genre dbr:Action ,
+                                   dbr:Drama ,
+                                   dbr:War ;
+                         dbo:releaseDate "2009-08-21"^^xsd:date ;
+                         dbo:runtime 153 ;
+                         dbo:starring dbr:Brad_Pitt ,
+                                      dbr:Christoph_Waltz ;
+                         rdfs:label "Inglourious Basterds"@en .
+
+
+###  http://dbpedia.org/resource/Interstellar
+dbr:Interstellar rdf:type owl:NamedIndividual ,
+                          dbo:Film ;
+                 dbo:director dbr:Christopher_Nolan ;
+                 dbo:genre dbr:Drama ,
+                           dbr:Science_Fiction ;
+                 dbo:releaseDate "2014-11-07"^^xsd:date ;
+                 dbo:runtime 169 ;
+                 dbo:starring dbr:Anne_Hathaway ,
+                              dbr:Matthew_McConaughey ;
+                 rdfs:label "Interstellar"@en .
+
+
+###  http://dbpedia.org/resource/James_Cameron
+dbr:James_Cameron rdf:type owl:NamedIndividual ,
+                           dbo:Person ;
+                  rdfs:label "James Cameron"@en .
+
+
+###  http://dbpedia.org/resource/Jeff_Goldblum
+dbr:Jeff_Goldblum rdf:type owl:NamedIndividual ,
+                           dbo:Person ;
+                  rdfs:label "Jeff Goldblum"@en .
+
+
+###  http://dbpedia.org/resource/Jennifer_Connelly
+dbr:Jennifer_Connelly rdf:type owl:NamedIndividual ,
+                               dbo:Person ;
+                      rdfs:label "Jennifer Connelly"@en .
+
+
+###  http://dbpedia.org/resource/Jesse_Eisenberg
+dbr:Jesse_Eisenberg rdf:type owl:NamedIndividual ,
+                             dbo:Person ;
+                    rdfs:label "Jesse Eisenberg"@en .
+
+
+###  http://dbpedia.org/resource/Joaquin_Phoenix
+dbr:Joaquin_Phoenix rdf:type owl:NamedIndividual ,
+                             dbo:Person ;
+                    rdfs:label "Joaquin Phoenix"@en .
+
+
+###  http://dbpedia.org/resource/Jonah_Hill
+dbr:Jonah_Hill rdf:type owl:NamedIndividual ,
+                        dbo:Person ;
+               rdfs:label "Jonah Hill"@en .
+
+
+###  http://dbpedia.org/resource/Jurassic_Park
+dbr:Jurassic_Park rdf:type owl:NamedIndividual ,
+                           dbo:Film ;
+                  dbo:director dbr:Steven_Spielberg ;
+                  dbo:genre dbr:Adventure ,
+                            dbr:Science_Fiction ;
+                  dbo:releaseDate "1993-06-11"^^xsd:date ;
+                  dbo:runtime 127 ;
+                  dbo:starring dbr:Jeff_Goldblum ,
+                               dbr:Laura_Dern ,
+                               dbr:Sam_Neill ;
+                  rdfs:label "Jurassic Park"@en .
+
+
+###  http://dbpedia.org/resource/Kate_Winslet
+dbr:Kate_Winslet rdf:type owl:NamedIndividual ,
+                          dbo:Person ;
+                 rdfs:label "Kate Winslet"@en .
+
+
+###  http://dbpedia.org/resource/Keanu_Reeves
+dbr:Keanu_Reeves rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Kenneth_Branagh
+dbr:Kenneth_Branagh rdf:type owl:NamedIndividual ,
+                             dbo:Person ;
+                    rdfs:label "Kenneth Branagh"@en .
+
+
+###  http://dbpedia.org/resource/Lana_Wachowski
+dbr:Lana_Wachowski rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Laura_Dern
+dbr:Laura_Dern rdf:type owl:NamedIndividual ,
+                        dbo:Person ;
+               rdfs:label "Laura Dern"@en .
+
+
+###  http://dbpedia.org/resource/Laurence_Fishburne
+dbr:Laurence_Fishburne rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Leonardo_DiCaprio
+dbr:Leonardo_DiCaprio rdf:type owl:NamedIndividual ,
+                               dbo:Person ;
+                      rdfs:label "Leonardo DiCaprio"@en .
+
+
+###  http://dbpedia.org/resource/Lilly_Wachowski
+dbr:Lilly_Wachowski rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Mad_Max_Fury_Road
+dbr:Mad_Max_Fury_Road rdf:type owl:NamedIndividual ,
+                               dbo:Film ;
+                      dbo:director dbr:George_Miller ;
+                      dbo:genre dbr:Action ,
+                                dbr:Adventure ,
+                                dbr:Science_Fiction ;
+                      dbo:releaseDate "2015-05-15"^^xsd:date ;
+                      dbo:runtime 120 ;
+                      dbo:starring dbr:Charlize_Theron ,
+                                   dbr:Tom_Hardy ;
+                      rdfs:label "Mad Max: Fury Road"@en .
+
+
+###  http://dbpedia.org/resource/Mark_Rylance
+dbr:Mark_Rylance rdf:type owl:NamedIndividual ,
+                          dbo:Person ;
+                 rdfs:label "Mark Rylance"@en .
+
+
+###  http://dbpedia.org/resource/Martin_Scorsese
+dbr:Martin_Scorsese rdf:type owl:NamedIndividual ,
+                             dbo:Person ;
+                    rdfs:label "Martin Scorsese"@en .
+
+
+###  http://dbpedia.org/resource/Matt_Damon
+dbr:Matt_Damon rdf:type owl:NamedIndividual ,
+                        dbo:Person ;
+               rdfs:label "Matt Damon"@en .
+
+
+###  http://dbpedia.org/resource/Matthew_McConaughey
+dbr:Matthew_McConaughey rdf:type owl:NamedIndividual ,
+                                 dbo:Person ;
+                        rdfs:label "Matthew McConaughey"@en .
+
+
+###  http://dbpedia.org/resource/Quentin_Tarantino
+dbr:Quentin_Tarantino rdf:type owl:NamedIndividual ,
+                               dbo:Person ;
+                      rdfs:label "Quentin Tarantino"@en .
+
+
+###  http://dbpedia.org/resource/Ridley_Scott
+dbr:Ridley_Scott rdf:type owl:NamedIndividual ,
+                          dbo:Person ;
+                 rdfs:label "Ridley Scott"@en .
+
+
+###  http://dbpedia.org/resource/Robert_Zemeckis
+dbr:Robert_Zemeckis rdf:type owl:NamedIndividual ,
+                             dbo:Person ;
+                    rdfs:label "Robert Zemeckis"@en .
+
+
+###  http://dbpedia.org/resource/Robin_Wright
+dbr:Robin_Wright rdf:type owl:NamedIndividual ,
+                          dbo:Person ;
+                 rdfs:label "Robin Wright"@en .
+
+
+###  http://dbpedia.org/resource/Romance
+dbr:Romance rdf:type owl:NamedIndividual ,
+                     schema:Genre ;
+            rdfs:label "Romance"@en .
+
+
+###  http://dbpedia.org/resource/Ron_Howard
+dbr:Ron_Howard rdf:type owl:NamedIndividual ,
+                        dbo:Person ;
+               rdfs:label "Ron Howard"@en .
+
+
+###  http://dbpedia.org/resource/Russell_Crowe
+dbr:Russell_Crowe rdf:type owl:NamedIndividual ,
+                           dbo:Person ;
+                  rdfs:label "Russell Crowe"@en .
+
+
+###  http://dbpedia.org/resource/Ryan_Gosling
+dbr:Ryan_Gosling rdf:type owl:NamedIndividual ,
+                          dbo:Person ;
+                 rdfs:label "Ryan Gosling"@en .
+
+
+###  http://dbpedia.org/resource/Sam_Neill
+dbr:Sam_Neill rdf:type owl:NamedIndividual ,
+                       dbo:Person ;
+              rdfs:label "Sam Neill"@en .
+
+
+###  http://dbpedia.org/resource/Sam_Worthington
+dbr:Sam_Worthington rdf:type owl:NamedIndividual ,
+                             dbo:Person ;
+                    rdfs:label "Sam Worthington"@en .
+
+
+###  http://dbpedia.org/resource/Saving_Private_Ryan
+dbr:Saving_Private_Ryan rdf:type owl:NamedIndividual ,
+                                 dbo:Film ;
+                        dbo:director dbr:Steven_Spielberg ;
+                        dbo:genre dbr:Drama ,
+                                  dbr:War ;
+                        dbo:releaseDate "1998-07-24"^^xsd:date ;
+                        dbo:runtime 169 ;
+                        dbo:starring dbr:Matt_Damon ,
+                                     dbr:Tom_Hanks ;
+                        rdfs:label "Saving Private Ryan"@en .
+
+
+###  http://dbpedia.org/resource/Scarlett_Johansson
+dbr:Scarlett_Johansson rdf:type owl:NamedIndividual ,
+                                dbo:Person ;
+                       rdfs:label "Scarlett Johansson"@en .
+
+
+###  http://dbpedia.org/resource/Science_Fiction
+dbr:Science_Fiction rdf:type owl:NamedIndividual .
+
+
+###  http://dbpedia.org/resource/Steven_Spielberg
+dbr:Steven_Spielberg rdf:type owl:NamedIndividual ,
+                              dbo:Person ;
+                     rdfs:label "Steven Spielberg"@en .
+
+
+###  http://dbpedia.org/resource/The_Dark_Knight
+dbr:The_Dark_Knight rdf:type owl:NamedIndividual ,
+                             dbo:Film ;
+                    dbo:director dbr:Christopher_Nolan ;
+                    dbo:genre dbr:Action ,
+                              dbr:Thriller ;
+                    dbo:releaseDate "2008-07-18"^^xsd:date ;
+                    dbo:runtime 152 ;
+                    dbo:starring dbr:Christian_Bale ,
+                                 dbr:Heath_Ledger ;
+                    rdfs:label "The Dark Knight"@en .
+
+
+###  http://dbpedia.org/resource/The_Matrix_Reloaded
+dbr:The_Matrix_Reloaded rdf:type owl:NamedIndividual ,
+                                 dbo:Film ;
+                        dbo:director dbr:Lana_Wachowski ,
+                                     dbr:Lilly_Wachowski ;
+                        dbo:genre dbr:Action ,
+                                  dbr:Science_Fiction ;
+                        dbo:releaseDate "2003-05-15"^^xsd:date ;
+                        dbo:runtime 138 ;
+                        dbo:starring dbr:Carrie-Anne_Moss ,
+                                     dbr:Keanu_Reeves ,
+                                     dbr:Laurence_Fishburne ;
+                        rdfs:label "The Matrix Reloaded"@en .
+
+
+###  http://dbpedia.org/resource/The_Prestige
+dbr:The_Prestige rdf:type owl:NamedIndividual ,
+                          dbo:Film ;
+                 dbo:director dbr:Christopher_Nolan ;
+                 dbo:genre dbr:Drama ,
+                           dbr:Thriller ;
+                 dbo:releaseDate "2006-10-20"^^xsd:date ;
+                 dbo:runtime 130 ;
+                 dbo:starring dbr:Christian_Bale ,
+                              dbr:Hugh_Jackman ,
+                              dbr:Scarlett_Johansson ;
+                 rdfs:label "The Prestige"@en .
+
+
+###  http://dbpedia.org/resource/The_Social_Network
+dbr:The_Social_Network rdf:type owl:NamedIndividual ,
+                                dbo:Film ;
+                       dbo:director dbr:David_Fincher ;
+                       dbo:genre dbr:Biography ,
+                                 dbr:Drama ;
+                       dbo:releaseDate "2010-10-01"^^xsd:date ;
+                       dbo:runtime 120 ;
+                       dbo:starring dbr:Andrew_Garfield ,
+                                    dbr:Jesse_Eisenberg ;
+                       rdfs:label "The Social Network"@en .
+
+
+###  http://dbpedia.org/resource/The_Terminal
+dbr:The_Terminal rdf:type owl:NamedIndividual ,
+                          dbo:Film ;
+                 dbo:director dbr:Steven_Spielberg ;
+                 dbo:genre dbr:Comedy ,
+                           dbr:Drama ;
+                 dbo:releaseDate "2004-06-18"^^xsd:date ;
+                 dbo:runtime 128 ;
+                 dbo:starring dbr:Catherine_Zeta_Jones ,
+                              dbr:Tom_Hanks ;
+                 rdfs:label "The Terminal"@en .
+
+
+###  http://dbpedia.org/resource/The_Wolf_of_Wall_Street
+dbr:The_Wolf_of_Wall_Street rdf:type owl:NamedIndividual ,
+                                     dbo:Film ;
+                            dbo:director dbr:Martin_Scorsese ;
+                            dbo:genre dbr:Biography ,
+                                      dbr:Comedy ,
+                                      dbr:Drama ;
+                            dbo:releaseDate "2013-12-25"^^xsd:date ;
+                            dbo:runtime 180 ;
+                            dbo:starring dbr:Jonah_Hill ,
+                                         dbr:Leonardo_DiCaprio ;
+                            rdfs:label "The Wolf of Wall Street"@en .
+
+
+###  http://dbpedia.org/resource/Thriller
+dbr:Thriller rdf:type owl:NamedIndividual ,
+                      schema:Genre ;
+             rdfs:label "Thriller"@en .
+
+
+###  http://dbpedia.org/resource/Titanic
+dbr:Titanic rdf:type owl:NamedIndividual ,
+                     dbo:Film ;
+            dbo:director dbr:James_Cameron ;
+            dbo:genre dbr:Drama ,
+                      dbr:Romance ;
+            dbo:releaseDate "1997-12-19"^^xsd:date ;
+            dbo:runtime 195 ;
+            dbo:starring dbr:Kate_Winslet ,
+                         dbr:Leonardo_DiCaprio ;
+            rdfs:label "Titanic"@en .
+
+
+###  http://dbpedia.org/resource/Tom_Hanks
+dbr:Tom_Hanks rdf:type owl:NamedIndividual ,
+                       dbo:Person ;
+              rdfs:label "Tom Hanks"@en .
+
+
+###  http://dbpedia.org/resource/Tom_Hardy
+dbr:Tom_Hardy rdf:type owl:NamedIndividual ,
+                       dbo:Person ;
+              rdfs:label "Tom Hardy"@en .
+
+
+###  http://dbpedia.org/resource/War
+dbr:War rdf:type owl:NamedIndividual ,
+                 schema:Genre ;
+        rdfs:label "War"@en .
+
+
+###  http://dbpedia.org/resource/Zoe_Saldana
+dbr:Zoe_Saldana rdf:type owl:NamedIndividual ,
+                         dbo:Person ;
+                rdfs:label "Zoe Saldana"@en .
+
+
+###  http://example.org/abox#Adam_McKay
+exa:Adam_McKay rdf:type owl:NamedIndividual ,
+                        ext:Director .
+
+
+###  http://example.org/abox#Alejandro_G._Inarritu
+exa:Alejandro_G._Inarritu rdf:type owl:NamedIndividual ,
+                                   ext:Director .
+
+
+###  http://example.org/abox#Alex_Garland
+exa:Alex_Garland rdf:type owl:NamedIndividual ,
+                          ext:Director .
+
+
+###  http://example.org/abox#Alfonso_Cuaron
+exa:Alfonso_Cuaron rdf:type owl:NamedIndividual ,
+                            ext:Director .
+
+
+###  http://example.org/abox#Alicia_Vikander
+exa:Alicia_Vikander rdf:type owl:NamedIndividual ,
+                             ext:Actor .
+
+
+###  http://example.org/abox#Allison_Williams
+exa:Allison_Williams rdf:type owl:NamedIndividual ,
+                              ext:Actor .
+
+
+###  http://example.org/abox#Amy_Adams
+exa:Amy_Adams rdf:type owl:NamedIndividual ,
+                       ext:Actor .
+
+
+###  http://example.org/abox#Amy_Poehler
+exa:Amy_Poehler rdf:type owl:NamedIndividual ,
+                         ext:Actor .
+
+
+###  http://example.org/abox#Argo
+exa:Argo rdf:type owl:NamedIndividual ,
+                  dbo:Film ;
+         ext:hasDirector exa:Ben_Affleck .
+
+
+###  http://example.org/abox#Arrival
+exa:Arrival rdf:type owl:NamedIndividual ,
+                     dbo:Film ;
+            dbo:director exa:Denis_Villeneuve ;
+            dbo:genre <https://schema.org/Drama> ,
+                      <https://schema.org/Mystery> ,
+                      <https://schema.org/Sci-Fi> ;
+            dbo:releaseDate "2016-11-11"^^xsd:date ;
+            dbo:runtime 116 ;
+            dbo:starring exa:Amy_Adams ,
+                         exa:Jeremy_Renner ;
+            rdfs:label "Arrival"@en .
+
+
+###  http://example.org/abox#Barry_Jenkins
+exa:Barry_Jenkins rdf:type owl:NamedIndividual ,
+                           ext:Director .
+
+
+###  http://example.org/abox#Barry_Keoghan
+exa:Barry_Keoghan rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Ben_Affleck
+exa:Ben_Affleck rdf:type owl:NamedIndividual ,
+                         ext:Actor .
+
+
+###  http://example.org/abox#Benedict_Cumberbatch
+exa:Benedict_Cumberbatch rdf:type owl:NamedIndividual ,
+                                  ext:Actor .
+
+
+###  http://example.org/abox#Birdman
+exa:Birdman rdf:type owl:NamedIndividual ,
+                     dbo:Film ;
+            dbo:director exa:Alejandro_G._Inarritu ;
+            dbo:genre <https://schema.org/Comedy> ,
+                      <https://schema.org/Drama> ;
+            dbo:releaseDate "2014-10-17"^^xsd:date ;
+            dbo:runtime 119 ;
+            dbo:starring exa:Edward_Norton ,
+                         exa:Michael_Keaton ;
+            rdfs:label "Birdman"@en .
+
+
+###  http://example.org/abox#Blade_Runner_2049
+exa:Blade_Runner_2049 rdf:type owl:NamedIndividual ,
+                               dbo:Film ;
+                      dbo:director exa:Denis_Villeneuve ;
+                      dbo:genre <https://schema.org/Action> ,
+                                <https://schema.org/Drama> ,
+                                <https://schema.org/Mystery> ;
+                      dbo:releaseDate "2017-10-06"^^xsd:date ;
+                      dbo:runtime 164 ;
+                      dbo:starring exa:Harrison_Ford ,
+                                   exa:Ryan_Gosling ;
+                      rdfs:label "Blade Runner 2049"@en .
+
+
+###  http://example.org/abox#Bong_Joon-ho
+exa:Bong_Joon-ho rdf:type owl:NamedIndividual ,
+                          ext:Director .
+
+
+###  http://example.org/abox#Boyhood
+exa:Boyhood rdf:type owl:NamedIndividual ,
+                     dbo:Film ;
+            dbo:director exa:Richard_Linklater ;
+            dbo:genre <https://schema.org/Drama> ;
+            dbo:releaseDate "2014-07-11"^^xsd:date ;
+            dbo:runtime 165 ;
+            dbo:starring exa:Ellar_Coltrane ,
+                         exa:Patricia_Arquette ;
+            rdfs:label "Boyhood"@en .
+
+
+###  http://example.org/abox#Brie_Larson
+exa:Brie_Larson rdf:type owl:NamedIndividual ,
+                         ext:Actor .
+
+
+###  http://example.org/abox#Brooklynn_Prince
+exa:Brooklynn_Prince rdf:type owl:NamedIndividual ,
+                              ext:Actor .
+
+
+###  http://example.org/abox#Charlize_Theron
+exa:Charlize_Theron rdf:type owl:NamedIndividual ,
+                             ext:Actor .
+
+
+###  http://example.org/abox#Chiwetel_Ejiofor
+exa:Chiwetel_Ejiofor rdf:type owl:NamedIndividual ,
+                              ext:Actor .
+
+
+###  http://example.org/abox#Christian_Bale
+exa:Christian_Bale rdf:type owl:NamedIndividual ,
+                            ext:Actor .
+
+
+###  http://example.org/abox#Christopher_Nolan
+exa:Christopher_Nolan rdf:type owl:NamedIndividual ,
+                               ext:Director .
+
+
+###  http://example.org/abox#Colin_Farrell
+exa:Colin_Farrell rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Dallas_Buyers_Club
+exa:Dallas_Buyers_Club rdf:type owl:NamedIndividual ,
+                                dbo:Film ;
+                       dbo:director exa:Jean-Marc_Vallee ;
+                       dbo:genre <https://schema.org/Biography> ,
+                                 <https://schema.org/Drama> ;
+                       dbo:releaseDate "2013-11-01"^^xsd:date ;
+                       dbo:runtime 117 ;
+                       dbo:starring exa:Jennifer_Garner ,
+                                    exa:Matthew_McConaughey ;
+                       rdfs:label "Dallas Buyers Club"@en .
+
+
+###  http://example.org/abox#Damien_Chazelle
+exa:Damien_Chazelle rdf:type owl:NamedIndividual ,
+                             ext:Director .
+
+
+###  http://example.org/abox#Daniel_Kaluuya
+exa:Daniel_Kaluuya rdf:type owl:NamedIndividual ,
+                            ext:Actor .
+
+
+###  http://example.org/abox#David_Fincher
+exa:David_Fincher rdf:type owl:NamedIndividual ,
+                           ext:Director .
+
+
+###  http://example.org/abox#Denis_Villeneuve
+exa:Denis_Villeneuve rdf:type owl:NamedIndividual ,
+                              ext:Director .
+
+
+###  http://example.org/abox#Domhnall_Gleeson
+exa:Domhnall_Gleeson rdf:type owl:NamedIndividual ,
+                              ext:Actor .
+
+
+###  http://example.org/abox#Dunkirk
+exa:Dunkirk rdf:type owl:NamedIndividual ,
+                     dbo:Film ;
+            dbo:director exa:Christopher_Nolan ;
+            dbo:genre <https://schema.org/Action> ,
+                      <https://schema.org/Drama> ,
+                      <https://schema.org/History> ;
+            dbo:releaseDate "2017-07-21"^^xsd:date ;
+            dbo:runtime 106 ;
+            dbo:starring exa:Barry_Keoghan ,
+                         exa:Fionn_Whitehead ;
+            rdfs:label "Dunkirk"@en .
+
+
+###  http://example.org/abox#Edward_Norton
+exa:Edward_Norton rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Ellar_Coltrane
+exa:Ellar_Coltrane rdf:type owl:NamedIndividual ,
+                            ext:Actor .
+
+
+###  http://example.org/abox#Emma_Stone
+exa:Emma_Stone rdf:type owl:NamedIndividual ,
+                        ext:Actor .
+
+
+###  http://example.org/abox#Ex_Machina
+exa:Ex_Machina rdf:type owl:NamedIndividual ,
+                        dbo:Film ;
+               dbo:director exa:Alex_Garland ;
+               dbo:genre <https://schema.org/Drama> ,
+                         <https://schema.org/Sci-Fi> ,
+                         <https://schema.org/Thriller> ;
+               dbo:releaseDate "2014-12-16"^^xsd:date ;
+               dbo:runtime 108 ;
+               dbo:starring exa:Alicia_Vikander ,
+                            exa:Domhnall_Gleeson ;
+               rdfs:label "Ex Machina"@en .
+
+
+###  http://example.org/abox#Fionn_Whitehead
+exa:Fionn_Whitehead rdf:type owl:NamedIndividual ,
+                             ext:Actor .
+
+
+###  http://example.org/abox#Frances_McDormand
+exa:Frances_McDormand rdf:type owl:NamedIndividual ,
+                               ext:Actor .
+
+
+###  http://example.org/abox#George_Clooney
+exa:George_Clooney rdf:type owl:NamedIndividual ,
+                            ext:Actor .
+
+
+###  http://example.org/abox#George_Miller
+exa:George_Miller rdf:type owl:NamedIndividual ,
+                           ext:Director .
+
+
+###  http://example.org/abox#Get_Out
+exa:Get_Out rdf:type owl:NamedIndividual ,
+                     dbo:Film ;
+            dbo:director exa:Jordan_Peele ;
+            dbo:genre <https://schema.org/Horror> ,
+                      <https://schema.org/Mystery> ,
+                      <https://schema.org/Thriller> ;
+            dbo:releaseDate "2017-02-24"^^xsd:date ;
+            dbo:runtime 104 ;
+            dbo:starring exa:Allison_Williams ,
+                         exa:Daniel_Kaluuya ;
+            rdfs:label "Get Out"@en .
+
+
+###  http://example.org/abox#Gone_Girl
+exa:Gone_Girl rdf:type owl:NamedIndividual ,
+                       dbo:Film ;
+              dbo:director exa:David_Fincher ;
+              dbo:genre <https://schema.org/Drama> ,
+                        <https://schema.org/Mystery> ,
+                        <https://schema.org/Thriller> ;
+              dbo:releaseDate "2014-10-03"^^xsd:date ;
+              dbo:runtime 149 ;
+              dbo:starring exa:Ben_Affleck ,
+                           exa:Rosamund_Pike ;
+              rdfs:label "Gone Girl"@en .
+
+
+###  http://example.org/abox#Gravity
+exa:Gravity rdf:type owl:NamedIndividual ,
+                     dbo:Film ;
+            dbo:director exa:Alfonso_Cuaron ;
+            dbo:genre <https://schema.org/Drama> ,
+                      <https://schema.org/Sci-Fi> ,
+                      <https://schema.org/Thriller> ;
+            dbo:releaseDate "2013-10-04"^^xsd:date ;
+            dbo:runtime 91 ;
+            dbo:starring exa:George_Clooney ,
+                         exa:Sandra_Bullock ;
+            rdfs:label "Gravity"@en .
+
+
+###  http://example.org/abox#Greta_Gerwig
+exa:Greta_Gerwig rdf:type owl:NamedIndividual ,
+                          ext:Director .
+
+
+###  http://example.org/abox#Guillermo_del_Toro
+exa:Guillermo_del_Toro rdf:type owl:NamedIndividual ,
+                                ext:Director .
+
+
+###  http://example.org/abox#Harrison_Ford
+exa:Harrison_Ford rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Her
+exa:Her rdf:type owl:NamedIndividual ,
+                 dbo:Film ;
+        dbo:director exa:Spike_Jonze ;
+        dbo:genre <https://schema.org/Drama> ,
+                  <https://schema.org/Romance> ,
+                  <https://schema.org/Sci-Fi> ;
+        dbo:releaseDate "2013-12-18"^^xsd:date ;
+        dbo:runtime 126 ;
+        dbo:starring exa:Joaquin_Phoenix ,
+                     exa:Scarlett_Johansson ;
+        rdfs:label "Her"@en .
+
+
+###  http://example.org/abox#Inside_Out
+exa:Inside_Out rdf:type owl:NamedIndividual ,
+                        dbo:Film ;
+               dbo:director exa:Pete_Docter ;
+               dbo:genre <https://schema.org/Adventure> ,
+                         <https://schema.org/Animation> ,
+                         <https://schema.org/Comedy> ;
+               dbo:releaseDate "2015-06-19"^^xsd:date ;
+               dbo:runtime 95 ;
+               dbo:starring exa:Amy_Poehler ,
+                            exa:Phyllis_Smith ;
+               rdfs:label "Inside Out"@en .
+
+
+###  http://example.org/abox#J.K._Simmons
+exa:J.K._Simmons rdf:type owl:NamedIndividual ,
+                          ext:Actor .
+
+
+###  http://example.org/abox#Jacob_Tremblay
+exa:Jacob_Tremblay rdf:type owl:NamedIndividual ,
+                            ext:Actor .
+
+
+###  http://example.org/abox#Jean-Marc_Vallee
+exa:Jean-Marc_Vallee rdf:type owl:NamedIndividual ,
+                              ext:Director .
+
+
+###  http://example.org/abox#Jennifer_Garner
+exa:Jennifer_Garner rdf:type owl:NamedIndividual ,
+                             ext:Actor .
+
+
+###  http://example.org/abox#Jeremy_Renner
+exa:Jeremy_Renner rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Joaquin_Phoenix
+exa:Joaquin_Phoenix rdf:type owl:NamedIndividual ,
+                             ext:Actor .
+
+
+###  http://example.org/abox#Jonah_Hill
+exa:Jonah_Hill rdf:type owl:NamedIndividual ,
+                        ext:Actor .
+
+
+###  http://example.org/abox#Jordan_Peele
+exa:Jordan_Peele rdf:type owl:NamedIndividual ,
+                          ext:Director .
+
+
+###  http://example.org/abox#Keira_Knightley
+exa:Keira_Knightley rdf:type owl:NamedIndividual ,
+                             ext:Actor .
+
+
+###  http://example.org/abox#La_La_Land
+exa:La_La_Land rdf:type owl:NamedIndividual ,
+                        dbo:Film ;
+               dbo:director exa:Damien_Chazelle ;
+               dbo:genre <https://schema.org/Comedy> ,
+                         <https://schema.org/Drama> ,
+                         <https://schema.org/Music> ;
+               dbo:releaseDate "2016-12-09"^^xsd:date ;
+               dbo:runtime 128 ;
+               dbo:starring exa:Emma_Stone ,
+                            exa:Ryan_Gosling ;
+               rdfs:label "La La Land"@en .
+
+
+###  http://example.org/abox#Lady_Bird
+exa:Lady_Bird rdf:type owl:NamedIndividual ,
+                       dbo:Film ;
+              dbo:director exa:Greta_Gerwig ;
+              dbo:genre <https://schema.org/Comedy> ,
+                        <https://schema.org/Drama> ;
+              dbo:releaseDate "2017-11-03"^^xsd:date ;
+              dbo:runtime 94 ;
+              dbo:starring exa:Laurie_Metcalf ,
+                           exa:Saoirse_Ronan ;
+              rdfs:label "Lady Bird"@en .
+
+
+###  http://example.org/abox#Laurie_Metcalf
+exa:Laurie_Metcalf rdf:type owl:NamedIndividual ,
+                            ext:Actor .
+
+
+###  http://example.org/abox#Lee_Sun-kyun
+exa:Lee_Sun-kyun rdf:type owl:NamedIndividual ,
+                          ext:Actor .
+
+
+###  http://example.org/abox#Lenny_Abrahamson
+exa:Lenny_Abrahamson rdf:type owl:NamedIndividual ,
+                              ext:Director .
+
+
+###  http://example.org/abox#Leonardo_DiCaprio
+exa:Leonardo_DiCaprio rdf:type owl:NamedIndividual ,
+                               ext:Actor .
+
+
+###  http://example.org/abox#Mad_Max_Fury_Road
+exa:Mad_Max_Fury_Road rdf:type owl:NamedIndividual ,
+                               dbo:Film ;
+                      dbo:director exa:George_Miller ;
+                      dbo:genre <https://schema.org/Action> ,
+                                <https://schema.org/Adventure> ,
+                                <https://schema.org/Sci-Fi> ;
+                      dbo:releaseDate "2015-05-15"^^xsd:date ;
+                      dbo:runtime 120 ;
+                      dbo:starring exa:Charlize_Theron ,
+                                   exa:Tom_Hardy ;
+                      rdfs:label "Mad Max Fury Road"@en .
+
+
+###  http://example.org/abox#Mahershala_Ali
+exa:Mahershala_Ali rdf:type owl:NamedIndividual ,
+                            ext:Actor .
+
+
+###  http://example.org/abox#Mark_Ruffalo
+exa:Mark_Ruffalo rdf:type owl:NamedIndividual ,
+                          ext:Actor .
+
+
+###  http://example.org/abox#Martin_McDonagh
+exa:Martin_McDonagh rdf:type owl:NamedIndividual ,
+                             ext:Director .
+
+
+###  http://example.org/abox#Martin_Scorsese
+exa:Martin_Scorsese rdf:type owl:NamedIndividual ,
+                             ext:Director .
+
+
+###  http://example.org/abox#Matthew_McConaughey
+exa:Matthew_McConaughey rdf:type owl:NamedIndividual ,
+                                 ext:Actor .
+
+
+###  http://example.org/abox#Michael_Fassbender
+exa:Michael_Fassbender rdf:type owl:NamedIndividual ,
+                                ext:Actor .
+
+
+###  http://example.org/abox#Michael_Keaton
+exa:Michael_Keaton rdf:type owl:NamedIndividual ,
+                            ext:Actor .
+
+
+###  http://example.org/abox#Michael_Shannon
+exa:Michael_Shannon rdf:type owl:NamedIndividual ,
+                             ext:Actor .
+
+
+###  http://example.org/abox#Miles_Teller
+exa:Miles_Teller rdf:type owl:NamedIndividual ,
+                          ext:Actor .
+
+
+###  http://example.org/abox#Moonlight
+exa:Moonlight rdf:type owl:NamedIndividual ,
+                       dbo:Film ;
+              dbo:director exa:Barry_Jenkins ;
+              dbo:genre <https://schema.org/Drama> ;
+              dbo:releaseDate "2016-10-21"^^xsd:date ;
+              dbo:runtime 111 ;
+              dbo:starring exa:Mahershala_Ali ,
+                           exa:Naomie_Harris ;
+              rdfs:label "Moonlight"@en .
+
+
+###  http://example.org/abox#Morten_Tyldum
+exa:Morten_Tyldum rdf:type owl:NamedIndividual ,
+                           ext:Director .
+
+
+###  http://example.org/abox#Naomie_Harris
+exa:Naomie_Harris rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Parasite
+exa:Parasite rdf:type owl:NamedIndividual ,
+                      dbo:Film ;
+             dbo:director exa:Bong_Joon-ho ;
+             dbo:genre <https://schema.org/Comedy> ,
+                       <https://schema.org/Drama> ,
+                       <https://schema.org/Thriller> ;
+             dbo:releaseDate "2019-05-30"^^xsd:date ;
+             dbo:runtime 132 ;
+             dbo:starring exa:Lee_Sun-kyun ,
+                          exa:Song_Kang-ho ;
+             rdfs:label "Parasite"@en .
+
+
+###  http://example.org/abox#Patricia_Arquette
+exa:Patricia_Arquette rdf:type owl:NamedIndividual ,
+                               ext:Actor .
+
+
+###  http://example.org/abox#Pete_Docter
+exa:Pete_Docter rdf:type owl:NamedIndividual ,
+                         ext:Director .
+
+
+###  http://example.org/abox#Phyllis_Smith
+exa:Phyllis_Smith rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Rachel_Weisz
+exa:Rachel_Weisz rdf:type owl:NamedIndividual ,
+                          ext:Actor .
+
+
+###  http://example.org/abox#Ralph_Fiennes
+exa:Ralph_Fiennes rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Richard_Linklater
+exa:Richard_Linklater rdf:type owl:NamedIndividual ,
+                               ext:Director .
+
+
+###  http://example.org/abox#Room
+exa:Room rdf:type owl:NamedIndividual ,
+                  dbo:Film ;
+         dbo:director exa:Lenny_Abrahamson ;
+         dbo:genre <https://schema.org/Drama> ,
+                   <https://schema.org/Thriller> ;
+         dbo:releaseDate "2015-10-16"^^xsd:date ;
+         dbo:runtime 118 ;
+         dbo:starring exa:Brie_Larson ,
+                      exa:Jacob_Tremblay ;
+         rdfs:label "Room"@en .
+
+
+###  http://example.org/abox#Rosamund_Pike
+exa:Rosamund_Pike rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Ryan_Gosling
+exa:Ryan_Gosling rdf:type owl:NamedIndividual ,
+                          ext:Actor .
+
+
+###  http://example.org/abox#Sally_Hawkins
+exa:Sally_Hawkins rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Sandra_Bullock
+exa:Sandra_Bullock rdf:type owl:NamedIndividual ,
+                            ext:Actor .
+
+
+###  http://example.org/abox#Saoirse_Ronan
+exa:Saoirse_Ronan rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Scarlett_Johansson
+exa:Scarlett_Johansson rdf:type owl:NamedIndividual ,
+                                ext:Actor .
+
+
+###  http://example.org/abox#Sean_Baker
+exa:Sean_Baker rdf:type owl:NamedIndividual ,
+                        ext:Director .
+
+
+###  http://example.org/abox#Song_Kang-ho
+exa:Song_Kang-ho rdf:type owl:NamedIndividual ,
+                          ext:Actor .
+
+
+###  http://example.org/abox#Spike_Jonze
+exa:Spike_Jonze rdf:type owl:NamedIndividual ,
+                         ext:Director .
+
+
+###  http://example.org/abox#Spotlight
+exa:Spotlight rdf:type owl:NamedIndividual ,
+                       dbo:Film ;
+              dbo:director exa:Tom_McCarthy ;
+              dbo:genre <https://schema.org/Biography> ,
+                        <https://schema.org/Crime> ,
+                        <https://schema.org/Drama> ;
+              dbo:releaseDate "2015-11-06"^^xsd:date ;
+              dbo:runtime 129 ;
+              dbo:starring exa:Mark_Ruffalo ,
+                           exa:Michael_Keaton ;
+              rdfs:label "Spotlight"@en .
+
+
+###  http://example.org/abox#Steve_Carell
+exa:Steve_Carell rdf:type owl:NamedIndividual ,
+                          ext:Actor .
+
+
+###  http://example.org/abox#Steve_McQueen
+exa:Steve_McQueen rdf:type owl:NamedIndividual ,
+                           ext:Director .
+
+
+###  http://example.org/abox#The_Big_Short
+exa:The_Big_Short rdf:type owl:NamedIndividual ,
+                           dbo:Film ;
+                  dbo:director exa:Adam_McKay ;
+                  dbo:genre <https://schema.org/Biography> ,
+                            <https://schema.org/Comedy> ,
+                            <https://schema.org/Drama> ;
+                  dbo:releaseDate "2015-12-11"^^xsd:date ;
+                  dbo:runtime 130 ;
+                  dbo:starring exa:Christian_Bale ,
+                               exa:Steve_Carell ;
+                  rdfs:label "The Big Short"@en .
+
+
+###  http://example.org/abox#The_Dark_Knight
+exa:The_Dark_Knight rdf:type owl:NamedIndividual ,
+                             dbo:Film .
+
+
+###  http://example.org/abox#The_Dark_Night
+exa:The_Dark_Night rdf:type owl:NamedIndividual .
+
+
+###  http://example.org/abox#The_Florida_Project
+exa:The_Florida_Project rdf:type owl:NamedIndividual ,
+                                 dbo:Film ;
+                        dbo:director exa:Sean_Baker ;
+                        dbo:genre <https://schema.org/Drama> ;
+                        dbo:releaseDate "2017-10-06"^^xsd:date ;
+                        dbo:runtime 111 ;
+                        dbo:starring exa:Brooklynn_Prince ,
+                                     exa:Willem_Dafoe ;
+                        rdfs:label "The Florida Project"@en .
+
+
+###  http://example.org/abox#The_Grand_Budapest_Hotel
+exa:The_Grand_Budapest_Hotel rdf:type owl:NamedIndividual ,
+                                      dbo:Film ;
+                             dbo:director exa:Wes_Anderson ;
+                             dbo:genre <https://schema.org/Adventure> ,
+                                       <https://schema.org/Comedy> ,
+                                       <https://schema.org/Crime> ;
+                             dbo:releaseDate "2014-03-07"^^xsd:date ;
+                             dbo:runtime 99 ;
+                             dbo:starring exa:Ralph_Fiennes ,
+                                          exa:Tony_Revolori ;
+                             rdfs:label "The Grand Budapest Hotel"@en .
+
+
+###  http://example.org/abox#The_Imitation_Game
+exa:The_Imitation_Game rdf:type owl:NamedIndividual ,
+                                dbo:Film ;
+                       dbo:director exa:Morten_Tyldum ;
+                       dbo:genre <https://schema.org/Biography> ,
+                                 <https://schema.org/Drama> ,
+                                 <https://schema.org/Thriller> ;
+                       dbo:releaseDate "2014-11-28"^^xsd:date ;
+                       dbo:runtime 114 ;
+                       dbo:starring exa:Benedict_Cumberbatch ,
+                                    exa:Keira_Knightley ;
+                       rdfs:label "The Imitation Game"@en .
+
+
+###  http://example.org/abox#The_Lobster
+exa:The_Lobster rdf:type owl:NamedIndividual ,
+                         dbo:Film ;
+                dbo:director exa:Yorgos_Lanthimos ;
+                dbo:genre <https://schema.org/Comedy> ,
+                          <https://schema.org/Drama> ,
+                          <https://schema.org/Romance> ;
+                dbo:releaseDate "2015-10-16"^^xsd:date ;
+                dbo:runtime 119 ;
+                dbo:starring exa:Colin_Farrell ,
+                             exa:Rachel_Weisz ;
+                rdfs:label "The Lobster"@en .
+
+
+###  http://example.org/abox#The_Revenant
+exa:The_Revenant rdf:type owl:NamedIndividual ,
+                          dbo:Film ;
+                 dbo:director exa:Alejandro_G._Inarritu ;
+                 dbo:genre <https://schema.org/Action> ,
+                           <https://schema.org/Adventure> ,
+                           <https://schema.org/Drama> ;
+                 dbo:releaseDate "2015-12-25"^^xsd:date ;
+                 dbo:runtime 156 ;
+                 dbo:starring exa:Leonardo_DiCaprio ,
+                              exa:Tom_Hardy ;
+                 rdfs:label "The Revenant"@en .
+
+
+###  http://example.org/abox#The_Shape_of_Water
+exa:The_Shape_of_Water rdf:type owl:NamedIndividual ,
+                                dbo:Film ;
+                       dbo:director exa:Guillermo_del_Toro ;
+                       dbo:genre <https://schema.org/Adventure> ,
+                                 <https://schema.org/Drama> ,
+                                 <https://schema.org/Fantasy> ;
+                       dbo:releaseDate "2017-12-01"^^xsd:date ;
+                       dbo:runtime 123 ;
+                       dbo:starring exa:Michael_Shannon ,
+                                    exa:Sally_Hawkins ;
+                       rdfs:label "The Shape of Water"@en .
+
+
+###  http://example.org/abox#The_Wolf_of_Wall_Street
+exa:The_Wolf_of_Wall_Street rdf:type owl:NamedIndividual ,
+                                     dbo:Film ;
+                            dbo:director exa:Martin_Scorsese ;
+                            dbo:genre <https://schema.org/Biography> ,
+                                      <https://schema.org/Comedy> ,
+                                      <https://schema.org/Crime> ;
+                            dbo:releaseDate "2013-12-25"^^xsd:date ;
+                            dbo:runtime 180 ;
+                            dbo:starring exa:Jonah_Hill ,
+                                         exa:Leonardo_DiCaprio ;
+                            rdfs:label "The Wolf of Wall Street"@en .
+
+
+###  http://example.org/abox#Three_Billboards_Outside_Ebbing_Missouri
+exa:Three_Billboards_Outside_Ebbing_Missouri rdf:type owl:NamedIndividual ,
+                                                      dbo:Film ;
+                                             dbo:director exa:Martin_McDonagh ;
+                                             dbo:genre <https://schema.org/Comedy> ,
+                                                       <https://schema.org/Crime> ,
+                                                       <https://schema.org/Drama> ;
+                                             dbo:releaseDate "2017-11-10"^^xsd:date ;
+                                             dbo:runtime 115 ;
+                                             dbo:starring exa:Frances_McDormand ,
+                                                          exa:Woody_Harrelson ;
+                                             rdfs:label "Three Billboards Outside Ebbing Missouri"@en .
+
+
+###  http://example.org/abox#Tom_Hardy
+exa:Tom_Hardy rdf:type owl:NamedIndividual ,
+                       ext:Actor .
+
+
+###  http://example.org/abox#Tom_McCarthy
+exa:Tom_McCarthy rdf:type owl:NamedIndividual ,
+                          ext:Director .
+
+
+###  http://example.org/abox#Tony_Revolori
+exa:Tony_Revolori rdf:type owl:NamedIndividual ,
+                           ext:Actor .
+
+
+###  http://example.org/abox#Wes_Anderson
+exa:Wes_Anderson rdf:type owl:NamedIndividual ,
+                          ext:Director .
+
+
+###  http://example.org/abox#Whiplash
+exa:Whiplash rdf:type owl:NamedIndividual ,
+                      dbo:Film ;
+             dbo:director exa:Damien_Chazelle ;
+             dbo:genre <https://schema.org/Drama> ,
+                       <https://schema.org/Music> ;
+             dbo:releaseDate "2014-10-10"^^xsd:date ;
+             dbo:runtime 106 ;
+             dbo:starring exa:J.K._Simmons ,
+                          exa:Miles_Teller ;
+             rdfs:label "Whiplash"@en .
+
+
+###  http://example.org/abox#Willem_Dafoe
+exa:Willem_Dafoe rdf:type owl:NamedIndividual ,
+                          ext:Actor .
+
+
+###  http://example.org/abox#Woody_Harrelson
+exa:Woody_Harrelson rdf:type owl:NamedIndividual ,
+                             ext:Actor .
+
+
+###  http://example.org/abox#Yorgos_Lanthimos
+exa:Yorgos_Lanthimos rdf:type owl:NamedIndividual ,
+                              ext:Director .
+
+
+###  http://example.org/abox#12_Years_a_Slave
+<http://example.org/abox#12_Years_a_Slave> rdf:type owl:NamedIndividual ,
+                                                    dbo:Film ;
+                                           dbo:director exa:Steve_McQueen ;
+                                           dbo:genre <https://schema.org/Biography> ,
+                                                     <https://schema.org/Drama> ,
+                                                     <https://schema.org/History> ;
+                                           dbo:releaseDate "2013-10-18"^^xsd:date ;
+                                           dbo:runtime 136 ;
+                                           dbo:starring exa:Chiwetel_Ejiofor ,
+                                                        exa:Michael_Fassbender ;
+                                           rdfs:label "12 Years a Slave"@en .
+
+
+###  https://schema.org/Action
+<https://schema.org/Action> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Adventure
+<https://schema.org/Adventure> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Animation
+<https://schema.org/Animation> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Biography
+<https://schema.org/Biography> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Comedy
+<https://schema.org/Comedy> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Crime
+<https://schema.org/Crime> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Drama
+<https://schema.org/Drama> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Fantasy
+<https://schema.org/Fantasy> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/History
+<https://schema.org/History> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Horror
+<https://schema.org/Horror> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Music
+<https://schema.org/Music> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Mystery
+<https://schema.org/Mystery> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Romance
+<https://schema.org/Romance> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Sci-Fi
+<https://schema.org/Sci-Fi> rdf:type owl:NamedIndividual .
+
+
+###  https://schema.org/Thriller
+<https://schema.org/Thriller> rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
