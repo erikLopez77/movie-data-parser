@@ -12,17 +12,57 @@
 <http://example.org/tbox> rdf:type owl:Ontology .
 
 #################################################################
-#    Datatypes
+#    Object Properties
 #################################################################
 
-###  http://example.org/tbox#positiveInteger
-ext:positiveInteger rdf:type rdfs:Datatype ;
-                    owl:equivalentClass [ rdf:type rdfs:Datatype ;
-                                          owl:onDatatype xsd:integer ;
-                                          owl:withRestrictions ( [ xsd:minInclusive 0
-                                                                 ]
-                                                               )
-                                        ] .
+###  http://dbpedia.org/ontology/director
+dbo:director rdf:type owl:ObjectProperty ;
+             owl:equivalentProperty ext:hasDirector .
+
+
+###  http://dbpedia.org/ontology/genre
+dbo:genre rdf:type owl:ObjectProperty ;
+          owl:equivalentProperty ext:hasGenre .
+
+
+###  http://dbpedia.org/ontology/starring
+dbo:starring rdf:type owl:ObjectProperty ;
+             owl:equivalentProperty ext:hasActor .
+
+
+###  http://example.org/tbox#actsIn
+ext:actsIn rdf:type owl:ObjectProperty ;
+           owl:inverseOf ext:hasActor .
+
+
+###  http://example.org/tbox#directs
+ext:directs rdf:type owl:ObjectProperty ;
+            owl:inverseOf ext:hasDirector .
+
+
+###  http://example.org/tbox#hasActor
+ext:hasActor rdf:type owl:ObjectProperty ;
+             rdfs:domain dbo:Film ;
+             rdfs:range ext:Actor .
+
+
+###  http://example.org/tbox#hasDirector
+ext:hasDirector rdf:type owl:ObjectProperty ;
+                rdfs:domain dbo:Film ;
+                rdfs:range ext:Director .
+
+
+###  http://example.org/tbox#hasGenre
+ext:hasGenre rdf:type owl:ObjectProperty ;
+             rdfs:domain dbo:Film ;
+             rdfs:range ext:genre .
+
+
+###  http://example.org/tbox#isPrequel
+ext:isPrequel rdf:type owl:ObjectProperty ,
+                       owl:TransitiveProperty ;
+              rdfs:domain dbo:Film ;
+              rdfs:range dbo:Film .
 
 
 #################################################################
@@ -31,8 +71,7 @@ ext:positiveInteger rdf:type rdfs:Datatype ;
 
 ###  http://dbpedia.org/ontology/releaseDate
 dbo:releaseDate rdf:type owl:DatatypeProperty ;
-                owl:equivalentProperty ext:releaseDate ;
-                rdfs:range xsd:integer .
+                owl:equivalentProperty ext:releaseDate .
 
 
 ###  http://dbpedia.org/ontology/runtime
@@ -42,14 +81,12 @@ dbo:runtime rdf:type owl:DatatypeProperty ;
 
 ###  http://example.org/tbox#releaseDate
 ext:releaseDate rdf:type owl:DatatypeProperty ;
-                rdfs:domain dbo:Film ;
-                rdfs:range xsd:dateTime .
+                rdfs:domain dbo:Film .
 
 
 ###  http://example.org/tbox#runtime
 ext:runtime rdf:type owl:DatatypeProperty ;
-            rdfs:domain dbo:Film ;
-            rdfs:range xsd:integer .
+            rdfs:domain dbo:Film .
 
 
 #################################################################
@@ -103,6 +140,10 @@ ext:Person rdf:type owl:Class ;
 
 ###  http://example.org/tbox#Work
 ext:Work rdf:type owl:Class .
+
+
+###  http://example.org/tbox#genre
+ext:genre rdf:type owl:Class .
 
 
 ###  http://schema.org/Genre

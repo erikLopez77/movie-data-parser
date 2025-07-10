@@ -26,14 +26,6 @@ dbo:director rdf:type owl:AnnotationProperty .
 dbo:genre rdf:type owl:AnnotationProperty .
 
 
-###  http://dbpedia.org/ontology/releaseDate
-dbo:releaseDate rdf:type owl:AnnotationProperty .
-
-
-###  http://dbpedia.org/ontology/runtime
-dbo:runtime rdf:type owl:AnnotationProperty .
-
-
 ###  http://dbpedia.org/ontology/starring
 dbo:starring rdf:type owl:AnnotationProperty .
 
@@ -60,10 +52,10 @@ dbr:A_Beautiful_Mind rdf:type owl:NamedIndividual ,
                      dbo:director dbr:Ron_Howard ;
                      dbo:genre dbr:Biography ,
                                dbr:Drama ;
-                     dbo:releaseDate "2001-12-21"^^xsd:date ;
-                     dbo:runtime 135 ;
                      dbo:starring dbr:Jennifer_Connelly ,
                                   dbr:Russell_Crowe ;
+                     dbo:releaseDate "2001-12-21"^^xsd:date ;
+                     dbo:runtime 135 ;
                      rdfs:label "A Beautiful Mind"@en .
 
 
@@ -98,10 +90,10 @@ dbr:Avatar rdf:type owl:NamedIndividual ,
            dbo:genre dbr:Action ,
                      dbr:Adventure ,
                      dbr:Science_Fiction ;
-           dbo:releaseDate "2009-12-18"^^xsd:date ;
-           dbo:runtime 162 ;
            dbo:starring dbr:Sam_Worthington ,
                         dbr:Zoe_Saldana ;
+           dbo:releaseDate "2009-12-18"^^xsd:date ;
+           dbo:runtime 162 ;
            rdfs:label "Avatar"@en .
 
 
@@ -117,10 +109,10 @@ dbr:Blade_Runner_2049 rdf:type owl:NamedIndividual ,
                       dbo:director dbr:Denis_Villeneuve ;
                       dbo:genre dbr:Drama ,
                                 dbr:Science_Fiction ;
-                      dbo:releaseDate "2017-10-06"^^xsd:date ;
-                      dbo:runtime 164 ;
                       dbo:starring dbr:Harrison_Ford ,
                                    dbr:Ryan_Gosling ;
+                      dbo:releaseDate "2017-10-06"^^xsd:date ;
+                      dbo:runtime 164 ;
                       rdfs:label "Blade Runner 2049"@en .
 
 
@@ -143,10 +135,10 @@ dbr:Catch_Me_If_You_Can rdf:type owl:NamedIndividual ,
                         dbo:director dbr:Steven_Spielberg ;
                         dbo:genre dbr:Drama ,
                                   dbr:Thriller ;
-                        dbo:releaseDate "2002-12-25"^^xsd:date ;
-                        dbo:runtime 141 ;
                         dbo:starring dbr:Leonardo_DiCaprio ,
                                      dbr:Tom_Hanks ;
+                        dbo:releaseDate "2002-12-25"^^xsd:date ;
+                        dbo:runtime 141 ;
                         rdfs:label "Catch Me If You Can"@en .
 
 
@@ -209,11 +201,11 @@ dbr:Dunkirk rdf:type owl:NamedIndividual ,
             dbo:genre dbr:Action ,
                       dbr:Drama ,
                       dbr:War ;
-            dbo:releaseDate "2017-07-21"^^xsd:date ;
-            dbo:runtime 106 ;
             dbo:starring dbr:Kenneth_Branagh ,
                          dbr:Mark_Rylance ,
                          dbr:Tom_Hardy ;
+            dbo:releaseDate "2017-07-21"^^xsd:date ;
+            dbo:runtime 106 ;
             rdfs:label "Dunkirk"@en .
 
 
@@ -229,11 +221,11 @@ dbr:Forrest_Gump rdf:type owl:NamedIndividual ,
                  dbo:director dbr:Robert_Zemeckis ;
                  dbo:genre dbr:Drama ,
                            dbr:Romance ;
-                 dbo:releaseDate "1994-07-06"^^xsd:date ;
-                 dbo:runtime 142 ;
                  dbo:starring dbr:Gary_Sinise ,
                               dbr:Robin_Wright ,
                               dbr:Tom_Hanks ;
+                 dbo:releaseDate "1994-07-06"^^xsd:date ;
+                 dbo:runtime 142 ;
                  rdfs:label "Forrest Gump"@en .
 
 
@@ -256,10 +248,10 @@ dbr:Gladiator rdf:type owl:NamedIndividual ,
               dbo:genre dbr:Action ,
                         dbr:Adventure ,
                         dbr:Drama ;
-              dbo:releaseDate "2000-05-05"^^xsd:date ;
-              dbo:runtime 155 ;
               dbo:starring dbr:Joaquin_Phoenix ,
                            dbr:Russell_Crowe ;
+              dbo:releaseDate "2000-05-05"^^xsd:date ;
+              dbo:runtime 155 ;
               rdfs:label "Gladiator"@en .
 
 
@@ -287,10 +279,10 @@ dbr:Inception rdf:type owl:NamedIndividual ,
               dbo:director dbr:Christopher_Nolan ;
               dbo:genre dbr:Science_Fiction ,
                         dbr:Thriller ;
-              dbo:releaseDate "2010-07-16"^^xsd:date ;
-              dbo:runtime 148 ;
               dbo:starring dbr:Elliot_Page ,
                            dbr:Leonardo_DiCaprio ;
+              dbo:releaseDate "2010-07-16"^^xsd:date ;
+              dbo:runtime 148 ;
               rdfs:label "Inception"@en .
 
 
@@ -301,10 +293,10 @@ dbr:Inglourious_Basterds rdf:type owl:NamedIndividual ,
                          dbo:genre dbr:Action ,
                                    dbr:Drama ,
                                    dbr:War ;
-                         dbo:releaseDate "2009-08-21"^^xsd:date ;
-                         dbo:runtime 153 ;
                          dbo:starring dbr:Brad_Pitt ,
                                       dbr:Christoph_Waltz ;
+                         dbo:releaseDate "2009-08-21"^^xsd:date ;
+                         dbo:runtime 153 ;
                          rdfs:label "Inglourious Basterds"@en .
 
 
@@ -314,10 +306,10 @@ dbr:Interstellar rdf:type owl:NamedIndividual ,
                  dbo:director dbr:Christopher_Nolan ;
                  dbo:genre dbr:Drama ,
                            dbr:Science_Fiction ;
-                 dbo:releaseDate "2014-11-07"^^xsd:date ;
-                 dbo:runtime 169 ;
                  dbo:starring dbr:Anne_Hathaway ,
                               dbr:Matthew_McConaughey ;
+                 dbo:releaseDate "2014-11-07"^^xsd:date ;
+                 dbo:runtime 169 ;
                  rdfs:label "Interstellar"@en .
 
 
@@ -363,11 +355,11 @@ dbr:Jurassic_Park rdf:type owl:NamedIndividual ,
                   dbo:director dbr:Steven_Spielberg ;
                   dbo:genre dbr:Adventure ,
                             dbr:Science_Fiction ;
-                  dbo:releaseDate "1993-06-11"^^xsd:date ;
-                  dbo:runtime 127 ;
                   dbo:starring dbr:Jeff_Goldblum ,
                                dbr:Laura_Dern ,
                                dbr:Sam_Neill ;
+                  dbo:releaseDate "1993-06-11"^^xsd:date ;
+                  dbo:runtime 127 ;
                   rdfs:label "Jurassic Park"@en .
 
 
@@ -418,10 +410,10 @@ dbr:Mad_Max_Fury_Road rdf:type owl:NamedIndividual ,
                       dbo:genre dbr:Action ,
                                 dbr:Adventure ,
                                 dbr:Science_Fiction ;
-                      dbo:releaseDate "2015-05-15"^^xsd:date ;
-                      dbo:runtime 120 ;
                       dbo:starring dbr:Charlize_Theron ,
                                    dbr:Tom_Hardy ;
+                      dbo:releaseDate "2015-05-15"^^xsd:date ;
+                      dbo:runtime 120 ;
                       rdfs:label "Mad Max: Fury Road"@en .
 
 
@@ -515,10 +507,10 @@ dbr:Saving_Private_Ryan rdf:type owl:NamedIndividual ,
                         dbo:director dbr:Steven_Spielberg ;
                         dbo:genre dbr:Drama ,
                                   dbr:War ;
-                        dbo:releaseDate "1998-07-24"^^xsd:date ;
-                        dbo:runtime 169 ;
                         dbo:starring dbr:Matt_Damon ,
                                      dbr:Tom_Hanks ;
+                        dbo:releaseDate "1998-07-24"^^xsd:date ;
+                        dbo:runtime 169 ;
                         rdfs:label "Saving Private Ryan"@en .
 
 
@@ -544,10 +536,10 @@ dbr:The_Dark_Knight rdf:type owl:NamedIndividual ,
                     dbo:director dbr:Christopher_Nolan ;
                     dbo:genre dbr:Action ,
                               dbr:Thriller ;
-                    dbo:releaseDate "2008-07-18"^^xsd:date ;
-                    dbo:runtime 152 ;
                     dbo:starring dbr:Christian_Bale ,
                                  dbr:Heath_Ledger ;
+                    dbo:releaseDate "2008-07-18"^^xsd:date ;
+                    dbo:runtime 152 ;
                     rdfs:label "The Dark Knight"@en .
 
 
@@ -558,11 +550,11 @@ dbr:The_Matrix_Reloaded rdf:type owl:NamedIndividual ,
                                      dbr:Lilly_Wachowski ;
                         dbo:genre dbr:Action ,
                                   dbr:Science_Fiction ;
-                        dbo:releaseDate "2003-05-15"^^xsd:date ;
-                        dbo:runtime 138 ;
                         dbo:starring dbr:Carrie-Anne_Moss ,
                                      dbr:Keanu_Reeves ,
                                      dbr:Laurence_Fishburne ;
+                        dbo:releaseDate "2003-05-15"^^xsd:date ;
+                        dbo:runtime 138 ;
                         rdfs:label "The Matrix Reloaded"@en .
 
 
@@ -572,11 +564,11 @@ dbr:The_Prestige rdf:type owl:NamedIndividual ,
                  dbo:director dbr:Christopher_Nolan ;
                  dbo:genre dbr:Drama ,
                            dbr:Thriller ;
-                 dbo:releaseDate "2006-10-20"^^xsd:date ;
-                 dbo:runtime 130 ;
                  dbo:starring dbr:Christian_Bale ,
                               dbr:Hugh_Jackman ,
                               dbr:Scarlett_Johansson ;
+                 dbo:releaseDate "2006-10-20"^^xsd:date ;
+                 dbo:runtime 130 ;
                  rdfs:label "The Prestige"@en .
 
 
@@ -586,10 +578,10 @@ dbr:The_Social_Network rdf:type owl:NamedIndividual ,
                        dbo:director dbr:David_Fincher ;
                        dbo:genre dbr:Biography ,
                                  dbr:Drama ;
-                       dbo:releaseDate "2010-10-01"^^xsd:date ;
-                       dbo:runtime 120 ;
                        dbo:starring dbr:Andrew_Garfield ,
                                     dbr:Jesse_Eisenberg ;
+                       dbo:releaseDate "2010-10-01"^^xsd:date ;
+                       dbo:runtime 120 ;
                        rdfs:label "The Social Network"@en .
 
 
@@ -599,10 +591,10 @@ dbr:The_Terminal rdf:type owl:NamedIndividual ,
                  dbo:director dbr:Steven_Spielberg ;
                  dbo:genre dbr:Comedy ,
                            dbr:Drama ;
-                 dbo:releaseDate "2004-06-18"^^xsd:date ;
-                 dbo:runtime 128 ;
                  dbo:starring dbr:Catherine_Zeta_Jones ,
                               dbr:Tom_Hanks ;
+                 dbo:releaseDate "2004-06-18"^^xsd:date ;
+                 dbo:runtime 128 ;
                  rdfs:label "The Terminal"@en .
 
 
@@ -613,10 +605,10 @@ dbr:The_Wolf_of_Wall_Street rdf:type owl:NamedIndividual ,
                             dbo:genre dbr:Biography ,
                                       dbr:Comedy ,
                                       dbr:Drama ;
-                            dbo:releaseDate "2013-12-25"^^xsd:date ;
-                            dbo:runtime 180 ;
                             dbo:starring dbr:Jonah_Hill ,
                                          dbr:Leonardo_DiCaprio ;
+                            dbo:releaseDate "2013-12-25"^^xsd:date ;
+                            dbo:runtime 180 ;
                             rdfs:label "The Wolf of Wall Street"@en .
 
 
@@ -632,10 +624,10 @@ dbr:Titanic rdf:type owl:NamedIndividual ,
             dbo:director dbr:James_Cameron ;
             dbo:genre dbr:Drama ,
                       dbr:Romance ;
-            dbo:releaseDate "1997-12-19"^^xsd:date ;
-            dbo:runtime 195 ;
             dbo:starring dbr:Kate_Winslet ,
                          dbr:Leonardo_DiCaprio ;
+            dbo:releaseDate "1997-12-19"^^xsd:date ;
+            dbo:runtime 195 ;
             rdfs:label "Titanic"@en .
 
 
@@ -716,10 +708,10 @@ exa:Arrival rdf:type owl:NamedIndividual ,
             dbo:genre <https://schema.org/Drama> ,
                       <https://schema.org/Mystery> ,
                       <https://schema.org/Sci-Fi> ;
-            dbo:releaseDate "2016-11-11"^^xsd:date ;
-            dbo:runtime 116 ;
             dbo:starring exa:Amy_Adams ,
                          exa:Jeremy_Renner ;
+            dbo:releaseDate "2016-11-11"^^xsd:date ;
+            dbo:runtime 116 ;
             rdfs:label "Arrival"@en .
 
 
@@ -731,6 +723,12 @@ exa:Barry_Jenkins rdf:type owl:NamedIndividual ,
 ###  http://example.org/abox#Barry_Keoghan
 exa:Barry_Keoghan rdf:type owl:NamedIndividual ,
                            ext:Actor .
+
+
+###  http://example.org/abox#Batman_Begins
+exa:Batman_Begins rdf:type owl:NamedIndividual ,
+                           dbo:Film ;
+                  ext:isPrequel exa:The_Dark_Knight .
 
 
 ###  http://example.org/abox#Ben_Affleck
@@ -749,10 +747,10 @@ exa:Birdman rdf:type owl:NamedIndividual ,
             dbo:director exa:Alejandro_G._Inarritu ;
             dbo:genre <https://schema.org/Comedy> ,
                       <https://schema.org/Drama> ;
-            dbo:releaseDate "2014-10-17"^^xsd:date ;
-            dbo:runtime 119 ;
             dbo:starring exa:Edward_Norton ,
                          exa:Michael_Keaton ;
+            dbo:releaseDate "2014-10-17"^^xsd:date ;
+            dbo:runtime 119 ;
             rdfs:label "Birdman"@en .
 
 
@@ -763,10 +761,10 @@ exa:Blade_Runner_2049 rdf:type owl:NamedIndividual ,
                       dbo:genre <https://schema.org/Action> ,
                                 <https://schema.org/Drama> ,
                                 <https://schema.org/Mystery> ;
-                      dbo:releaseDate "2017-10-06"^^xsd:date ;
-                      dbo:runtime 164 ;
                       dbo:starring exa:Harrison_Ford ,
                                    exa:Ryan_Gosling ;
+                      dbo:releaseDate "2017-10-06"^^xsd:date ;
+                      dbo:runtime 164 ;
                       rdfs:label "Blade Runner 2049"@en .
 
 
@@ -780,10 +778,10 @@ exa:Boyhood rdf:type owl:NamedIndividual ,
                      dbo:Film ;
             dbo:director exa:Richard_Linklater ;
             dbo:genre <https://schema.org/Drama> ;
-            dbo:releaseDate "2014-07-11"^^xsd:date ;
-            dbo:runtime 165 ;
             dbo:starring exa:Ellar_Coltrane ,
                          exa:Patricia_Arquette ;
+            dbo:releaseDate "2014-07-11"^^xsd:date ;
+            dbo:runtime 165 ;
             rdfs:label "Boyhood"@en .
 
 
@@ -828,10 +826,10 @@ exa:Dallas_Buyers_Club rdf:type owl:NamedIndividual ,
                        dbo:director exa:Jean-Marc_Vallee ;
                        dbo:genre <https://schema.org/Biography> ,
                                  <https://schema.org/Drama> ;
-                       dbo:releaseDate "2013-11-01"^^xsd:date ;
-                       dbo:runtime 117 ;
                        dbo:starring exa:Jennifer_Garner ,
                                     exa:Matthew_McConaughey ;
+                       dbo:releaseDate "2013-11-01"^^xsd:date ;
+                       dbo:runtime 117 ;
                        rdfs:label "Dallas Buyers Club"@en .
 
 
@@ -867,10 +865,10 @@ exa:Dunkirk rdf:type owl:NamedIndividual ,
             dbo:genre <https://schema.org/Action> ,
                       <https://schema.org/Drama> ,
                       <https://schema.org/History> ;
-            dbo:releaseDate "2017-07-21"^^xsd:date ;
-            dbo:runtime 106 ;
             dbo:starring exa:Barry_Keoghan ,
                          exa:Fionn_Whitehead ;
+            dbo:releaseDate "2017-07-21"^^xsd:date ;
+            dbo:runtime 106 ;
             rdfs:label "Dunkirk"@en .
 
 
@@ -896,10 +894,10 @@ exa:Ex_Machina rdf:type owl:NamedIndividual ,
                dbo:genre <https://schema.org/Drama> ,
                          <https://schema.org/Sci-Fi> ,
                          <https://schema.org/Thriller> ;
-               dbo:releaseDate "2014-12-16"^^xsd:date ;
-               dbo:runtime 108 ;
                dbo:starring exa:Alicia_Vikander ,
                             exa:Domhnall_Gleeson ;
+               dbo:releaseDate "2014-12-16"^^xsd:date ;
+               dbo:runtime 108 ;
                rdfs:label "Ex Machina"@en .
 
 
@@ -930,10 +928,10 @@ exa:Get_Out rdf:type owl:NamedIndividual ,
             dbo:genre <https://schema.org/Horror> ,
                       <https://schema.org/Mystery> ,
                       <https://schema.org/Thriller> ;
-            dbo:releaseDate "2017-02-24"^^xsd:date ;
-            dbo:runtime 104 ;
             dbo:starring exa:Allison_Williams ,
                          exa:Daniel_Kaluuya ;
+            dbo:releaseDate "2017-02-24"^^xsd:date ;
+            dbo:runtime 104 ;
             rdfs:label "Get Out"@en .
 
 
@@ -944,10 +942,10 @@ exa:Gone_Girl rdf:type owl:NamedIndividual ,
               dbo:genre <https://schema.org/Drama> ,
                         <https://schema.org/Mystery> ,
                         <https://schema.org/Thriller> ;
-              dbo:releaseDate "2014-10-03"^^xsd:date ;
-              dbo:runtime 149 ;
               dbo:starring exa:Ben_Affleck ,
                            exa:Rosamund_Pike ;
+              dbo:releaseDate "2014-10-03"^^xsd:date ;
+              dbo:runtime 149 ;
               rdfs:label "Gone Girl"@en .
 
 
@@ -958,10 +956,10 @@ exa:Gravity rdf:type owl:NamedIndividual ,
             dbo:genre <https://schema.org/Drama> ,
                       <https://schema.org/Sci-Fi> ,
                       <https://schema.org/Thriller> ;
-            dbo:releaseDate "2013-10-04"^^xsd:date ;
-            dbo:runtime 91 ;
             dbo:starring exa:George_Clooney ,
                          exa:Sandra_Bullock ;
+            dbo:releaseDate "2013-10-04"^^xsd:date ;
+            dbo:runtime 91 ;
             rdfs:label "Gravity"@en .
 
 
@@ -987,10 +985,10 @@ exa:Her rdf:type owl:NamedIndividual ,
         dbo:genre <https://schema.org/Drama> ,
                   <https://schema.org/Romance> ,
                   <https://schema.org/Sci-Fi> ;
-        dbo:releaseDate "2013-12-18"^^xsd:date ;
-        dbo:runtime 126 ;
         dbo:starring exa:Joaquin_Phoenix ,
                      exa:Scarlett_Johansson ;
+        dbo:releaseDate "2013-12-18"^^xsd:date ;
+        dbo:runtime 126 ;
         rdfs:label "Her"@en .
 
 
@@ -1001,10 +999,10 @@ exa:Inside_Out rdf:type owl:NamedIndividual ,
                dbo:genre <https://schema.org/Adventure> ,
                          <https://schema.org/Animation> ,
                          <https://schema.org/Comedy> ;
-               dbo:releaseDate "2015-06-19"^^xsd:date ;
-               dbo:runtime 95 ;
                dbo:starring exa:Amy_Poehler ,
                             exa:Phyllis_Smith ;
+               dbo:releaseDate "2015-06-19"^^xsd:date ;
+               dbo:runtime 95 ;
                rdfs:label "Inside Out"@en .
 
 
@@ -1060,10 +1058,10 @@ exa:La_La_Land rdf:type owl:NamedIndividual ,
                dbo:genre <https://schema.org/Comedy> ,
                          <https://schema.org/Drama> ,
                          <https://schema.org/Music> ;
-               dbo:releaseDate "2016-12-09"^^xsd:date ;
-               dbo:runtime 128 ;
                dbo:starring exa:Emma_Stone ,
                             exa:Ryan_Gosling ;
+               dbo:releaseDate "2016-12-09"^^xsd:date ;
+               dbo:runtime 128 ;
                rdfs:label "La La Land"@en .
 
 
@@ -1073,10 +1071,10 @@ exa:Lady_Bird rdf:type owl:NamedIndividual ,
               dbo:director exa:Greta_Gerwig ;
               dbo:genre <https://schema.org/Comedy> ,
                         <https://schema.org/Drama> ;
-              dbo:releaseDate "2017-11-03"^^xsd:date ;
-              dbo:runtime 94 ;
               dbo:starring exa:Laurie_Metcalf ,
                            exa:Saoirse_Ronan ;
+              dbo:releaseDate "2017-11-03"^^xsd:date ;
+              dbo:runtime 94 ;
               rdfs:label "Lady Bird"@en .
 
 
@@ -1107,10 +1105,10 @@ exa:Mad_Max_Fury_Road rdf:type owl:NamedIndividual ,
                       dbo:genre <https://schema.org/Action> ,
                                 <https://schema.org/Adventure> ,
                                 <https://schema.org/Sci-Fi> ;
-                      dbo:releaseDate "2015-05-15"^^xsd:date ;
-                      dbo:runtime 120 ;
                       dbo:starring exa:Charlize_Theron ,
                                    exa:Tom_Hardy ;
+                      dbo:releaseDate "2015-05-15"^^xsd:date ;
+                      dbo:runtime 120 ;
                       rdfs:label "Mad Max Fury Road"@en .
 
 
@@ -1164,10 +1162,10 @@ exa:Moonlight rdf:type owl:NamedIndividual ,
                        dbo:Film ;
               dbo:director exa:Barry_Jenkins ;
               dbo:genre <https://schema.org/Drama> ;
-              dbo:releaseDate "2016-10-21"^^xsd:date ;
-              dbo:runtime 111 ;
               dbo:starring exa:Mahershala_Ali ,
                            exa:Naomie_Harris ;
+              dbo:releaseDate "2016-10-21"^^xsd:date ;
+              dbo:runtime 111 ;
               rdfs:label "Moonlight"@en .
 
 
@@ -1188,10 +1186,10 @@ exa:Parasite rdf:type owl:NamedIndividual ,
              dbo:genre <https://schema.org/Comedy> ,
                        <https://schema.org/Drama> ,
                        <https://schema.org/Thriller> ;
-             dbo:releaseDate "2019-05-30"^^xsd:date ;
-             dbo:runtime 132 ;
              dbo:starring exa:Lee_Sun-kyun ,
                           exa:Song_Kang-ho ;
+             dbo:releaseDate "2019-05-30"^^xsd:date ;
+             dbo:runtime 132 ;
              rdfs:label "Parasite"@en .
 
 
@@ -1231,10 +1229,10 @@ exa:Room rdf:type owl:NamedIndividual ,
          dbo:director exa:Lenny_Abrahamson ;
          dbo:genre <https://schema.org/Drama> ,
                    <https://schema.org/Thriller> ;
-         dbo:releaseDate "2015-10-16"^^xsd:date ;
-         dbo:runtime 118 ;
          dbo:starring exa:Brie_Larson ,
                       exa:Jacob_Tremblay ;
+         dbo:releaseDate "2015-10-16"^^xsd:date ;
+         dbo:runtime 118 ;
          rdfs:label "Room"@en .
 
 
@@ -1290,10 +1288,10 @@ exa:Spotlight rdf:type owl:NamedIndividual ,
               dbo:genre <https://schema.org/Biography> ,
                         <https://schema.org/Crime> ,
                         <https://schema.org/Drama> ;
-              dbo:releaseDate "2015-11-06"^^xsd:date ;
-              dbo:runtime 129 ;
               dbo:starring exa:Mark_Ruffalo ,
                            exa:Michael_Keaton ;
+              dbo:releaseDate "2015-11-06"^^xsd:date ;
+              dbo:runtime 129 ;
               rdfs:label "Spotlight"@en .
 
 
@@ -1314,16 +1312,22 @@ exa:The_Big_Short rdf:type owl:NamedIndividual ,
                   dbo:genre <https://schema.org/Biography> ,
                             <https://schema.org/Comedy> ,
                             <https://schema.org/Drama> ;
-                  dbo:releaseDate "2015-12-11"^^xsd:date ;
-                  dbo:runtime 130 ;
                   dbo:starring exa:Christian_Bale ,
                                exa:Steve_Carell ;
+                  dbo:releaseDate "2015-12-11"^^xsd:date ;
+                  dbo:runtime 130 ;
                   rdfs:label "The Big Short"@en .
 
 
 ###  http://example.org/abox#The_Dark_Knight
 exa:The_Dark_Knight rdf:type owl:NamedIndividual ,
-                             dbo:Film .
+                             dbo:Film ;
+                    ext:isPrequel exa:The_Dark_Knight_Rises .
+
+
+###  http://example.org/abox#The_Dark_Knight_Rises
+exa:The_Dark_Knight_Rises rdf:type owl:NamedIndividual ,
+                                   dbo:Film .
 
 
 ###  http://example.org/abox#The_Dark_Night
@@ -1335,10 +1339,10 @@ exa:The_Florida_Project rdf:type owl:NamedIndividual ,
                                  dbo:Film ;
                         dbo:director exa:Sean_Baker ;
                         dbo:genre <https://schema.org/Drama> ;
-                        dbo:releaseDate "2017-10-06"^^xsd:date ;
-                        dbo:runtime 111 ;
                         dbo:starring exa:Brooklynn_Prince ,
                                      exa:Willem_Dafoe ;
+                        dbo:releaseDate "2017-10-06"^^xsd:date ;
+                        dbo:runtime 111 ;
                         rdfs:label "The Florida Project"@en .
 
 
@@ -1349,10 +1353,10 @@ exa:The_Grand_Budapest_Hotel rdf:type owl:NamedIndividual ,
                              dbo:genre <https://schema.org/Adventure> ,
                                        <https://schema.org/Comedy> ,
                                        <https://schema.org/Crime> ;
-                             dbo:releaseDate "2014-03-07"^^xsd:date ;
-                             dbo:runtime 99 ;
                              dbo:starring exa:Ralph_Fiennes ,
                                           exa:Tony_Revolori ;
+                             dbo:releaseDate "2014-03-07"^^xsd:date ;
+                             dbo:runtime 99 ;
                              rdfs:label "The Grand Budapest Hotel"@en .
 
 
@@ -1363,10 +1367,10 @@ exa:The_Imitation_Game rdf:type owl:NamedIndividual ,
                        dbo:genre <https://schema.org/Biography> ,
                                  <https://schema.org/Drama> ,
                                  <https://schema.org/Thriller> ;
-                       dbo:releaseDate "2014-11-28"^^xsd:date ;
-                       dbo:runtime 114 ;
                        dbo:starring exa:Benedict_Cumberbatch ,
                                     exa:Keira_Knightley ;
+                       dbo:releaseDate "2014-11-28"^^xsd:date ;
+                       dbo:runtime 114 ;
                        rdfs:label "The Imitation Game"@en .
 
 
@@ -1377,10 +1381,10 @@ exa:The_Lobster rdf:type owl:NamedIndividual ,
                 dbo:genre <https://schema.org/Comedy> ,
                           <https://schema.org/Drama> ,
                           <https://schema.org/Romance> ;
-                dbo:releaseDate "2015-10-16"^^xsd:date ;
-                dbo:runtime 119 ;
                 dbo:starring exa:Colin_Farrell ,
                              exa:Rachel_Weisz ;
+                dbo:releaseDate "2015-10-16"^^xsd:date ;
+                dbo:runtime 119 ;
                 rdfs:label "The Lobster"@en .
 
 
@@ -1391,10 +1395,10 @@ exa:The_Revenant rdf:type owl:NamedIndividual ,
                  dbo:genre <https://schema.org/Action> ,
                            <https://schema.org/Adventure> ,
                            <https://schema.org/Drama> ;
-                 dbo:releaseDate "2015-12-25"^^xsd:date ;
-                 dbo:runtime 156 ;
                  dbo:starring exa:Leonardo_DiCaprio ,
                               exa:Tom_Hardy ;
+                 dbo:releaseDate "2015-12-25"^^xsd:date ;
+                 dbo:runtime 156 ;
                  rdfs:label "The Revenant"@en .
 
 
@@ -1405,10 +1409,10 @@ exa:The_Shape_of_Water rdf:type owl:NamedIndividual ,
                        dbo:genre <https://schema.org/Adventure> ,
                                  <https://schema.org/Drama> ,
                                  <https://schema.org/Fantasy> ;
-                       dbo:releaseDate "2017-12-01"^^xsd:date ;
-                       dbo:runtime 123 ;
                        dbo:starring exa:Michael_Shannon ,
                                     exa:Sally_Hawkins ;
+                       dbo:releaseDate "2017-12-01"^^xsd:date ;
+                       dbo:runtime 123 ;
                        rdfs:label "The Shape of Water"@en .
 
 
@@ -1419,10 +1423,10 @@ exa:The_Wolf_of_Wall_Street rdf:type owl:NamedIndividual ,
                             dbo:genre <https://schema.org/Biography> ,
                                       <https://schema.org/Comedy> ,
                                       <https://schema.org/Crime> ;
-                            dbo:releaseDate "2013-12-25"^^xsd:date ;
-                            dbo:runtime 180 ;
                             dbo:starring exa:Jonah_Hill ,
                                          exa:Leonardo_DiCaprio ;
+                            dbo:releaseDate "2013-12-25"^^xsd:date ;
+                            dbo:runtime 180 ;
                             rdfs:label "The Wolf of Wall Street"@en .
 
 
@@ -1433,10 +1437,10 @@ exa:Three_Billboards_Outside_Ebbing_Missouri rdf:type owl:NamedIndividual ,
                                              dbo:genre <https://schema.org/Comedy> ,
                                                        <https://schema.org/Crime> ,
                                                        <https://schema.org/Drama> ;
-                                             dbo:releaseDate "2017-11-10"^^xsd:date ;
-                                             dbo:runtime 115 ;
                                              dbo:starring exa:Frances_McDormand ,
                                                           exa:Woody_Harrelson ;
+                                             dbo:releaseDate "2017-11-10"^^xsd:date ;
+                                             dbo:runtime 115 ;
                                              rdfs:label "Three Billboards Outside Ebbing Missouri"@en .
 
 
@@ -1466,10 +1470,10 @@ exa:Whiplash rdf:type owl:NamedIndividual ,
              dbo:director exa:Damien_Chazelle ;
              dbo:genre <https://schema.org/Drama> ,
                        <https://schema.org/Music> ;
-             dbo:releaseDate "2014-10-10"^^xsd:date ;
-             dbo:runtime 106 ;
              dbo:starring exa:J.K._Simmons ,
                           exa:Miles_Teller ;
+             dbo:releaseDate "2014-10-10"^^xsd:date ;
+             dbo:runtime 106 ;
              rdfs:label "Whiplash"@en .
 
 
@@ -1496,15 +1500,14 @@ exa:Yorgos_Lanthimos rdf:type owl:NamedIndividual ,
 ###  http://example.org/abox#12_Years_a_Slave
 <http://example.org/abox#12_Years_a_Slave> rdf:type owl:NamedIndividual ,
                                                     dbo:Film ;
-                                           ext:runtime 120 ;
                                            dbo:director exa:Steve_McQueen ;
                                            dbo:genre <https://schema.org/Biography> ,
                                                      <https://schema.org/Drama> ,
                                                      <https://schema.org/History> ;
-                                           dbo:releaseDate "2013-10-18"^^xsd:date ;
-                                           dbo:runtime 136 ;
                                            dbo:starring exa:Chiwetel_Ejiofor ,
                                                         exa:Michael_Fassbender ;
+                                           dbo:releaseDate "2013-10-18"^^xsd:date ;
+                                           dbo:runtime 136 ;
                                            rdfs:label "12 Years a Slave"@en .
 
 
