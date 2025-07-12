@@ -1144,7 +1144,8 @@ exa:Michael_Fassbender rdf:type owl:NamedIndividual ,
 
 ###  http://example.org/abox#Michael_Keaton
 exa:Michael_Keaton rdf:type owl:NamedIndividual ,
-                            ext:Actor .
+                            ext:Actor ;
+                   ext:hasCollaboratedWith exa:Edward_Norton .
 
 
 ###  http://example.org/abox#Michael_Shannon

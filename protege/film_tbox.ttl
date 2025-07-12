@@ -46,6 +46,19 @@ ext:hasActor rdf:type owl:ObjectProperty ;
              rdfs:range ext:Actor .
 
 
+###  http://example.org/tbox#hasCollaboratedWith
+ext:hasCollaboratedWith rdf:type owl:ObjectProperty ,
+                                 owl:SymmetricProperty ;
+                        rdfs:domain dbo:Person ;
+                        rdfs:range dbo:Person ;
+                        owl:propertyChainAxiom ( ext:actsIn
+                                                 ext:hasActor
+                                               ) ,
+                                               ( ext:directs
+                                                 ext:hasActor
+                                               ) .
+
+
 ###  http://example.org/tbox#hasDirector
 ext:hasDirector rdf:type owl:ObjectProperty ;
                 rdfs:domain dbo:Film ;
@@ -59,10 +72,18 @@ ext:hasGenre rdf:type owl:ObjectProperty ;
 
 
 ###  http://example.org/tbox#isPrequel
-ext:isPrequel rdf:type owl:ObjectProperty ,
-                       owl:TransitiveProperty ;
+ext:isPrequel rdf:type owl:ObjectProperty ;
+              owl:inverseOf ext:isSequel ;
+              rdf:type owl:TransitiveProperty ;
               rdfs:domain dbo:Film ;
               rdfs:range dbo:Film .
+
+
+###  http://example.org/tbox#isSequel
+ext:isSequel rdf:type owl:ObjectProperty ,
+                      owl:TransitiveProperty ;
+             rdfs:domain dbo:Film ;
+             rdfs:range dbo:Film .
 
 
 #################################################################
