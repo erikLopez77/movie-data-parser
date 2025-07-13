@@ -7,9 +7,30 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix vann: <http://purl.org/vocab/vann/>
 @base <http://example.org/tbox#> .
 
-<http://example.org/tbox> rdf:type owl:Ontology .
+<http://example.org/tbox> rdf:type owl:Ontology ;
+                           owl:versionIRI <http://example.org/tbox/0.1> ;
+                           owl:versionInfo 0.1 ;
+                           dcterms:creator <https://www.linkedin.com/in/al-hakam-hamdam-5844b0151>;
+                           dcterms:description "Ontology for describing films"@en;
+                           dcterms:license "https://creativecommons.org/licenses/by/1.0";
+                           dcterms:modified "2025-07-13"^^xsd:date;
+                           dcterms:issued "2025-07-07"^^xsd:date;
+                           dcterms:title "Film Ontology"@en;
+                           vann:preferredNamespacePrefix "ext";
+                           vann:preferredNamespaceUri "http://example.org/tbox#".
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://example.org/tbox#ChatGPTExplanation
+ext:ChatGPTExplanation rdf:type owl:AnnotationProperty ;
+                       rdfs:subPropertyOf rdfs:comment .
+
 
 #################################################################
 #    Object Properties
@@ -62,7 +83,10 @@ ext:hasCollaboratedWith rdf:type owl:ObjectProperty ,
 ###  http://example.org/tbox#hasDirector
 ext:hasDirector rdf:type owl:ObjectProperty ;
                 rdfs:domain dbo:Film ;
-                rdfs:range ext:Director .
+                rdfs:range ext:Director ;
+                ext:ChatGPTExplanation "Ignore the equivalence between this property and dbo:director"@en ;
+                rdfs:comment "A property that assigns a director to a film."@en ;
+                rdfs:label "hasDirector"@en .
 
 
 ###  http://example.org/tbox#hasGenre
@@ -101,12 +125,14 @@ dbo:runtime rdf:type owl:DatatypeProperty ;
 
 
 ###  http://example.org/tbox#releaseDate
-ext:releaseDate rdf:type owl:DatatypeProperty ;
+ext:releaseDate rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
                 rdfs:domain dbo:Film .
 
 
 ###  http://example.org/tbox#runtime
-ext:runtime rdf:type owl:DatatypeProperty ;
+ext:runtime rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
             rdfs:domain dbo:Film .
 
 
