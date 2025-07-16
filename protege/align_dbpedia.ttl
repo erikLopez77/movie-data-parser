@@ -1,0 +1,73 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix ext: <http://example.org/tbox#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix schema: <http://schema.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<http://example.org/alignment> rdf:type owl:Ontology.
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dbpedia.org/ontology/director
+dbo:director rdf:type owl:ObjectProperty ;
+             owl:equivalentProperty ext:hasDirector .
+
+
+###  http://dbpedia.org/ontology/genre
+dbo:genre rdf:type owl:ObjectProperty ;
+          owl:equivalentProperty ext:hasGenre .
+
+
+###  http://dbpedia.org/ontology/starring
+dbo:starring rdf:type owl:ObjectProperty ;
+             owl:equivalentProperty ext:hasActor .
+
+ext:hasDirector rdf:type owl:ObjectProperty.
+
+ext:hasGenre rdf:type owl:ObjectProperty.
+
+ext:hasActor rdf:type owl:ObjectProperty.
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dbpedia.org/ontology/releaseDate
+dbo:releaseDate rdf:type owl:DatatypeProperty ;
+                owl:equivalentProperty ext:releaseDate .
+
+
+###  http://dbpedia.org/ontology/runtime
+dbo:runtime rdf:type owl:DatatypeProperty ;
+            owl:equivalentProperty ext:runtime .
+
+ext:releaseDate rdf:type owl:DatatypeProperty.
+
+ext:runtime rdf:type owl:DatatypeProperty.
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Film
+dbo:Film rdf:type owl:Class ;
+         owl:equivalentClass ext:Movie .
+
+
+###  http://dbpedia.org/ontology/Person
+dbo:Person rdf:type owl:Class ;
+           owl:equivalentClass ext:Person .
+
+
+###  http://example.org/tbox#Genre
+ext:Genre rdf:type owl:Class ;
+          owl:equivalentClass schema:Genre .
+
+

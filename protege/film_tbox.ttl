@@ -1,5 +1,4 @@
 @prefix : <http://example.org/tbox#> .
-@prefix dbo: <http://dbpedia.org/ontology/> .
 @prefix ext: <http://example.org/tbox#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,7 +6,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix schema: <http://schema.org/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @base <http://example.org/tbox#> .
 
@@ -76,21 +74,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://dbpedia.org/ontology/director
-dbo:director rdf:type owl:ObjectProperty ;
-             owl:equivalentProperty ext:hasDirector .
-
-
-###  http://dbpedia.org/ontology/genre
-dbo:genre rdf:type owl:ObjectProperty ;
-          owl:equivalentProperty ext:hasGenre .
-
-
-###  http://dbpedia.org/ontology/starring
-dbo:starring rdf:type owl:ObjectProperty ;
-             owl:equivalentProperty ext:hasActor .
-
-
 ###  http://example.org/tbox#actsIn
 ext:actsIn rdf:type owl:ObjectProperty ;
            owl:inverseOf ext:hasActor .
@@ -98,20 +81,21 @@ ext:actsIn rdf:type owl:ObjectProperty ;
 
 ###  http://example.org/tbox#directs
 ext:directs rdf:type owl:ObjectProperty ;
-            owl:inverseOf ext:hasDirector .
+            owl:inverseOf ext:hasDirector ;
+            rdf:type owl:IrreflexiveProperty.
 
 
 ###  http://example.org/tbox#hasActor
 ext:hasActor rdf:type owl:ObjectProperty ;
-             rdfs:domain dbo:Film ;
+             rdfs:domain ext:Movie ;
              rdfs:range ext:Actor .
 
 
 ###  http://example.org/tbox#hasCollaboratedWith
 ext:hasCollaboratedWith rdf:type owl:ObjectProperty ,
                                  owl:SymmetricProperty ;
-                        rdfs:domain dbo:Person ;
-                        rdfs:range dbo:Person ;
+                        rdfs:domain ext:Person ;
+                        rdfs:range ext:Person ;
                         owl:propertyChainAxiom ( ext:actsIn
                                                  ext:hasActor
                                                ) ,
@@ -122,7 +106,7 @@ ext:hasCollaboratedWith rdf:type owl:ObjectProperty ,
 
 ###  http://example.org/tbox#hasDirector
 ext:hasDirector rdf:type owl:ObjectProperty ;
-                rdfs:domain dbo:Film ;
+                rdfs:domain ext:Movie ;
                 rdfs:range ext:Director ;
                 ext:ChatGPTExplanation "Ignore the equivalence between this property and dbo:director"@en ;
                 rdfs:comment "A property that assigns a director to a film."@en ;
@@ -131,23 +115,23 @@ ext:hasDirector rdf:type owl:ObjectProperty ;
 
 ###  http://example.org/tbox#hasGenre
 ext:hasGenre rdf:type owl:ObjectProperty ;
-             rdfs:domain dbo:Film ;
-             rdfs:range ext:genre .
+             rdfs:domain ext:Movie ;
+             rdfs:range ext:Genre .
 
 
 ###  http://example.org/tbox#isPrequel
 ext:isPrequel rdf:type owl:ObjectProperty ;
               owl:inverseOf ext:isSequel ;
               rdf:type owl:TransitiveProperty ;
-              rdfs:domain dbo:Film ;
-              rdfs:range dbo:Film .
+              rdfs:domain ext:Movie ;
+              rdfs:range ext:Movie .
 
 
 ###  http://example.org/tbox#isSequel
 ext:isSequel rdf:type owl:ObjectProperty ,
                       owl:TransitiveProperty ;
-             rdfs:domain dbo:Film ;
-             rdfs:range dbo:Film .
+             rdfs:domain ext:Movie ;
+             rdfs:range ext:Movie .
 
 
 #################################################################
@@ -155,40 +139,22 @@ ext:isSequel rdf:type owl:ObjectProperty ,
 #################################################################
 
 ###  http://dbpedia.org/ontology/releaseDate
-dbo:releaseDate rdf:type owl:DatatypeProperty ;
-                owl:equivalentProperty ext:releaseDate .
-
-
-###  http://dbpedia.org/ontology/runtime
-dbo:runtime rdf:type owl:DatatypeProperty ;
-            owl:equivalentProperty ext:runtime .
-
 
 ###  http://example.org/tbox#releaseDate
 ext:releaseDate rdf:type owl:DatatypeProperty ,
                          owl:FunctionalProperty ;
-                rdfs:domain dbo:Film .
+                rdfs:domain ext:Movie .
 
 
 ###  http://example.org/tbox#runtime
 ext:runtime rdf:type owl:DatatypeProperty ,
                      owl:FunctionalProperty ;
-            rdfs:domain dbo:Film .
+            rdfs:domain ext:Movie .
 
 
 #################################################################
 #    Classes
 #################################################################
-
-###  http://dbpedia.org/ontology/Film
-dbo:Film rdf:type owl:Class ;
-         owl:equivalentClass ext:Movie .
-
-
-###  http://dbpedia.org/ontology/Person
-dbo:Person rdf:type owl:Class ;
-           owl:equivalentClass ext:Person .
-
 
 ###  http://example.org/tbox#Actor
 ext:Actor rdf:type owl:Class ;
@@ -222,11 +188,6 @@ ext:Director rdf:type owl:Class ;
              rdfs:subClassOf ext:Person .
 
 
-###  http://example.org/tbox#Genre
-ext:Genre rdf:type owl:Class ;
-          owl:equivalentClass schema:Genre .
-
-
 ###  http://example.org/tbox#Media
 ext:Media rdf:type owl:Class .
 
@@ -253,14 +214,6 @@ ext:Star rdf:type owl:Class ;
 
 ###  http://example.org/tbox#Work
 ext:Work rdf:type owl:Class .
-
-
-###  http://example.org/tbox#genre
-ext:genre rdf:type owl:Class .
-
-
-###  http://schema.org/Genre
-schema:Genre rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
