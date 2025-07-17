@@ -12,7 +12,8 @@
 @base <http://example.org/abox#> .
 
 <http://example.org/abox> rdf:type owl:Ontology ;
-                           owl:imports <http://example.org/tbox> .
+                           owl:imports <http://example.org/rules> ,
+                                       <http://example.org/tbox> .
 
 #################################################################
 #    Annotation properties
@@ -28,10 +29,6 @@ dbo:genre rdf:type owl:AnnotationProperty .
 
 ###  http://dbpedia.org/ontology/starring
 dbo:starring rdf:type owl:AnnotationProperty .
-
-
-###  http://example.org/tbox#hasDirector
-ext:hasDirector rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -119,11 +116,8 @@ dbr:Blade_Runner_2049 rdf:type owl:NamedIndividual ,
 ###  http://dbpedia.org/resource/Brad_Pitt
 dbr:Brad_Pitt rdf:type owl:NamedIndividual ,
                        dbo:Person ;
-              owl:sameAs exa:William_Bradley_Pitt ;
               rdfs:label "Brad Pitt"@en .
 
-
-###  http://example.org/abox#William_Bradley_Pitt
 
 ###  http://dbpedia.org/resource/Carrie-Anne_Moss
 dbr:Carrie-Anne_Moss rdf:type owl:NamedIndividual .
@@ -1144,8 +1138,7 @@ exa:Michael_Fassbender rdf:type owl:NamedIndividual ,
 
 ###  http://example.org/abox#Michael_Keaton
 exa:Michael_Keaton rdf:type owl:NamedIndividual ,
-                            ext:Actor ;
-                   ext:hasCollaboratedWith exa:Edward_Norton .
+                            ext:Actor .
 
 
 ###  http://example.org/abox#Michael_Shannon
@@ -1331,10 +1324,6 @@ exa:The_Dark_Knight_Rises rdf:type owl:NamedIndividual ,
                                    dbo:Film .
 
 
-###  http://example.org/abox#The_Dark_Night
-exa:The_Dark_Night rdf:type owl:NamedIndividual .
-
-
 ###  http://example.org/abox#The_Florida_Project
 exa:The_Florida_Project rdf:type owl:NamedIndividual ,
                                  dbo:Film ;
@@ -1481,11 +1470,6 @@ exa:Whiplash rdf:type owl:NamedIndividual ,
 ###  http://example.org/abox#Willem_Dafoe
 exa:Willem_Dafoe rdf:type owl:NamedIndividual ,
                           ext:Actor .
-
-
-###  http://example.org/abox#William_Bradley_Pitt
-exa:William_Bradley_Pitt rdf:type owl:NamedIndividual ,
-                                  dbo:Person .
 
 
 ###  http://example.org/abox#Woody_Harrelson

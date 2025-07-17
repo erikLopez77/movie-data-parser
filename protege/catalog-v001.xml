@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://example.org/tbox" uri="film_tbox_safety_copy.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://example.org/rules" uri="film_rules.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://example.org/rules" uri="file:/D:/OWL/film_rules2.ttl"/>
     <uri id="Imports Wizard Entry" name="http://example.org/alignment" uri="align_dbpedia.ttl"/>
     <uri id="Imports Wizard Entry" name="http://example.org/tbox" uri="film_tbox.ttl"/>
     <uri id="User Entered Import Resolution" name="http://example.org/tbox" uri="film_abox.ttl"/>

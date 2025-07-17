@@ -1,0 +1,276 @@
+@prefix : <http://www.semanticweb.org/alhak/ontologies/2024/8/untitled-ontology-71/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/alhak/ontologies/2024/8/untitled-ontology-71/> .
+
+<http://example.org/rules> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://dbpedia.org/ontology/director
+<http://dbpedia.org/ontology/director> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <http://example.org/tbox#hasDirector> ;
+                                       rdfs:domain <http://dbpedia.org/ontology/Film> ,
+                                                   <http://example.org/tbox#CreativeWork> ,
+                                                   <http://example.org/tbox#Media> ,
+                                                   <http://example.org/tbox#Movie> ,
+                                                   <http://example.org/tbox#Work> ;
+                                       rdfs:range <http://dbpedia.org/ontology/Person> ,
+                                                  <http://example.org/tbox#Director> ,
+                                                  <http://example.org/tbox#Person> .
+
+
+###  http://dbpedia.org/ontology/genre
+<http://dbpedia.org/ontology/genre> rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf <http://example.org/tbox#hasGenre> ;
+                                    rdfs:domain <http://dbpedia.org/ontology/Film> ,
+                                                <http://example.org/tbox#CreativeWork> ,
+                                                <http://example.org/tbox#Media> ,
+                                                <http://example.org/tbox#Movie> ,
+                                                <http://example.org/tbox#Work> ;
+                                    rdfs:range <http://example.org/tbox#Genre> ,
+                                               <http://schema.org/Genre> .
+
+
+###  http://dbpedia.org/ontology/starring
+<http://dbpedia.org/ontology/starring> rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf <http://example.org/tbox#hasActor> ;
+                                       rdfs:domain <http://dbpedia.org/ontology/Film> ,
+                                                   <http://example.org/tbox#CreativeWork> ,
+                                                   <http://example.org/tbox#Media> ,
+                                                   <http://example.org/tbox#Movie> ,
+                                                   <http://example.org/tbox#Work> ;
+                                       rdfs:range <http://dbpedia.org/ontology/Person> ,
+                                                  <http://example.org/tbox#Actor> ,
+                                                  <http://example.org/tbox#Person> .
+
+
+###  http://example.org/tbox#hasActor
+<http://example.org/tbox#hasActor> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://dbpedia.org/ontology/starring> ;
+                                   rdfs:domain <http://example.org/tbox#CreativeWork> ,
+                                               <http://example.org/tbox#Media> ,
+                                               <http://example.org/tbox#Movie> ,
+                                               <http://example.org/tbox#Work> ;
+                                   rdfs:range <http://dbpedia.org/ontology/Person> ,
+                                              <http://example.org/tbox#Person> .
+
+
+###  http://example.org/tbox#hasCollaboratedWith
+<http://example.org/tbox#hasCollaboratedWith> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://example.org/tbox#Person> ;
+                                              rdfs:range <http://example.org/tbox#Person> .
+
+
+###  http://example.org/tbox#hasDirector
+<http://example.org/tbox#hasDirector> rdf:type owl:ObjectProperty ;
+                                      rdfs:subPropertyOf <http://dbpedia.org/ontology/director> ;
+                                      rdfs:domain <http://example.org/tbox#CreativeWork> ,
+                                                  <http://example.org/tbox#Media> ,
+                                                  <http://example.org/tbox#Movie> ,
+                                                  <http://example.org/tbox#Work> ;
+                                      rdfs:range <http://dbpedia.org/ontology/Person> ,
+                                                 <http://example.org/tbox#Person> .
+
+
+###  http://example.org/tbox#hasGenre
+<http://example.org/tbox#hasGenre> rdf:type owl:ObjectProperty ;
+                                   rdfs:subPropertyOf <http://dbpedia.org/ontology/genre> ;
+                                   rdfs:domain <http://example.org/tbox#CreativeWork> ,
+                                               <http://example.org/tbox#Media> ,
+                                               <http://example.org/tbox#Movie> ,
+                                               <http://example.org/tbox#Work> ;
+                                   rdfs:range <http://schema.org/Genre> .
+
+
+###  http://example.org/tbox#isPrequel
+<http://example.org/tbox#isPrequel> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <http://example.org/tbox#CreativeWork> ,
+                                                <http://example.org/tbox#Media> ,
+                                                <http://example.org/tbox#Movie> ,
+                                                <http://example.org/tbox#Work> ;
+                                    rdfs:range <http://example.org/tbox#CreativeWork> ,
+                                               <http://example.org/tbox#Media> ,
+                                               <http://example.org/tbox#Movie> ,
+                                               <http://example.org/tbox#Work> .
+
+
+###  http://example.org/tbox#isSequel
+<http://example.org/tbox#isSequel> rdf:type owl:ObjectProperty ;
+                                   rdfs:domain <http://example.org/tbox#CreativeWork> ,
+                                               <http://example.org/tbox#Media> ,
+                                               <http://example.org/tbox#Movie> ,
+                                               <http://example.org/tbox#Work> ;
+                                   rdfs:range <http://example.org/tbox#CreativeWork> ,
+                                              <http://example.org/tbox#Media> ,
+                                              <http://example.org/tbox#Movie> ,
+                                              <http://example.org/tbox#Work> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://dbpedia.org/ontology/releaseDate
+<http://dbpedia.org/ontology/releaseDate> rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf <http://example.org/tbox#releaseDate> ;
+                                          rdfs:domain <http://dbpedia.org/ontology/Film> ,
+                                                      <http://example.org/tbox#CreativeWork> ,
+                                                      <http://example.org/tbox#Media> ,
+                                                      <http://example.org/tbox#Movie> ,
+                                                      <http://example.org/tbox#Work> .
+
+
+###  http://dbpedia.org/ontology/runtime
+<http://dbpedia.org/ontology/runtime> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf <http://example.org/tbox#runtime> ;
+                                      rdfs:domain <http://dbpedia.org/ontology/Film> ,
+                                                  <http://example.org/tbox#CreativeWork> ,
+                                                  <http://example.org/tbox#Media> ,
+                                                  <http://example.org/tbox#Movie> ,
+                                                  <http://example.org/tbox#Work> .
+
+
+###  http://example.org/tbox#releaseDate
+<http://example.org/tbox#releaseDate> rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf <http://dbpedia.org/ontology/releaseDate> ;
+                                      rdfs:domain <http://example.org/tbox#CreativeWork> ,
+                                                  <http://example.org/tbox#Media> ,
+                                                  <http://example.org/tbox#Movie> ,
+                                                  <http://example.org/tbox#Work> .
+
+
+###  http://example.org/tbox#runtime
+<http://example.org/tbox#runtime> rdf:type owl:DatatypeProperty ;
+                                  rdfs:subPropertyOf <http://dbpedia.org/ontology/runtime> ;
+                                  rdfs:domain <http://example.org/tbox#CreativeWork> ,
+                                              <http://example.org/tbox#Media> ,
+                                              <http://example.org/tbox#Movie> ,
+                                              <http://example.org/tbox#Work> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://dbpedia.org/ontology/Film
+<http://dbpedia.org/ontology/Film> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://example.org/tbox#CreativeWork> ,
+                                                   <http://example.org/tbox#Media> ,
+                                                   <http://example.org/tbox#Movie> .
+
+
+###  http://dbpedia.org/ontology/Person
+<http://dbpedia.org/ontology/Person> rdf:type owl:Class ;
+                                     rdfs:subClassOf <http://example.org/tbox#Person> .
+
+
+###  http://example.org/rules#ExcessivelyLongMovie
+:ExcessivelyLongMovie rdf:type owl:Class ;
+                      rdfs:subClassOf <http://dbpedia.org/ontology/Film> ,
+                                      <http://example.org/tbox#Movie> .
+
+
+###  http://example.org/tbox#Actor
+<http://example.org/tbox#Actor> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://dbpedia.org/ontology/Person> .
+
+
+###  http://example.org/tbox#CreativeWork
+<http://example.org/tbox#CreativeWork> rdf:type owl:Class .
+
+
+###  http://example.org/tbox#Director
+<http://example.org/tbox#Director> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://dbpedia.org/ontology/Person> .
+
+
+###  http://example.org/tbox#Genre
+<http://example.org/tbox#Genre> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://schema.org/Genre> .
+
+
+###  http://example.org/tbox#Media
+<http://example.org/tbox#Media> rdf:type owl:Class .
+
+
+###  http://example.org/tbox#Movie
+<http://example.org/tbox#Movie> rdf:type owl:Class ;
+                                rdfs:subClassOf <http://dbpedia.org/ontology/Film> .
+
+
+###  http://example.org/tbox#Person
+<http://example.org/tbox#Person> rdf:type owl:Class ;
+                                 rdfs:subClassOf <http://dbpedia.org/ontology/Person> .
+
+
+###  http://example.org/tbox#Work
+<http://example.org/tbox#Work> rdf:type owl:Class .
+
+
+###  http://schema.org/Genre
+<http://schema.org/Genre> rdf:type owl:Class ;
+                          rdfs:subClassOf <http://example.org/tbox#Genre> .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:m rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:r rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "Our first swrl rule" ;
+   rdfs:label "ReasonForExcessivelyLongMoview" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://example.org/tbox#Movie> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :m
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://example.org/tbox#runtime> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> :m ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :r
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :r ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 150 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :ExcessivelyLongMovie ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :m
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
